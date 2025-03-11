@@ -1,3 +1,13 @@
+{% set assetsPath = "" %}
+{% if page.url and page.url != "/" %}
+  {% set assetsPath = "../" %}
+{% endif %}
+
+
+
+
+
+
 <!-- Footer -->
 <footer class="bg-dark pt-16 pb-8 text-white">
     <!-- Blue with Orange Accent Pill Divider -->
@@ -9,7 +19,7 @@
             <!-- About Us Column -->
             <div>
                 <div class="mb-6">
-                    <img src="{{ '/assets/images/logo2.png' | url }}" alt="Adishesha Institute" class="h-20">
+                    <img src="{{ assetsPath }}assets/images/logo2.png" alt="Adishesha Institute" class="h-20">
                 </div>
                 <p class="text-gray-300 mb-6 text-sm">
                     Adishesha Institute of Education & Research is dedicated to providing exceptional educational experiences that empower students to achieve their full potential.
@@ -37,27 +47,27 @@
                 </h3>
                 <ul class="space-y-3 text-gray-300">
                     <li>
-                        <a href="{{ '/' | url }}" class="hover:text-accent transition duration-300 flex items-center">
+                        <a href="{% if page.url == '/' %}./{% else %}{{ assetsPath }}{% endif %}" class="hover:text-accent transition duration-300 flex items-center">
                             <i class="fas fa-chevron-right mr-2 text-xs text-primary"></i> Home
                         </a>
                     </li>
                     <li>
-                        <a href="{{ '/about/' | url }}" class="hover:text-accent transition duration-300 flex items-center">
+                        <a href="{{ assetsPath }}about/" class="hover:text-accent transition duration-300 flex items-center">
                             <i class="fas fa-chevron-right mr-2 text-xs text-primary"></i> About Us
                         </a>
                     </li>
                     <li>
-                        <a href="{{ '/services/' | url }}" class="hover:text-accent transition duration-300 flex items-center">
+                        <a href="{{ assetsPath }}services/" class="hover:text-accent transition duration-300 flex items-center">
                             <i class="fas fa-chevron-right mr-2 text-xs text-primary"></i> Services
                         </a>
                     </li>
                     <li>
-                        <a href="{{ '/programs/' | url }}" class="hover:text-accent transition duration-300 flex items-center">
+                        <a href="{{ assetsPath }}programs/" class="hover:text-accent transition duration-300 flex items-center">
                             <i class="fas fa-chevron-right mr-2 text-xs text-primary"></i> Programs
                         </a>
                     </li>
                     <li>
-                        <a href="{{ '/contact/' | url }}" class="hover:text-accent transition duration-300 flex items-center">
+                        <a href="{{ assetsPath }}contact/" class="hover:text-accent transition duration-300 flex items-center">
                             <i class="fas fa-chevron-right mr-2 text-xs text-primary"></i> Contact
                         </a>
                     </li>
@@ -144,12 +154,12 @@
         <!-- Bottom Footer -->
         <div class="flex flex-col md:flex-row justify-between items-center">
             <div class="text-gray-400 text-sm mb-4 md:mb-0">
-                &copy; <?php echo date("Y"); ?> Adishesha Institute of Education & Research. All rights reserved.
+                &copy; <script>document.write(new Date().getFullYear())</script> Adishesha Institute of Education & Research. All rights reserved.
             </div>
             <div class="flex flex-wrap justify-center md:justify-end gap-4 text-gray-400 text-sm">
-                <a href="#" class="hover:text-accent transition duration-300">Privacy Policy</a>
-                <a href="#" class="hover:text-accent transition duration-300">Terms of Service</a>
-                <a href="#" class="hover:text-accent transition duration-300">Sitemap</a>
+                <a href="{{ assetsPath }}privacy-policy/" class="hover:text-accent transition duration-300">Privacy Policy</a>
+                <a href="{{ assetsPath }}terms/" class="hover:text-accent transition duration-300">Terms of Service</a>
+                <a href="{{ assetsPath }}sitemap/" class="hover:text-accent transition duration-300">Sitemap</a>
             </div>
         </div>
     </div>
@@ -180,8 +190,8 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 </script>
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.waypoints.min.js?v=1"></script>
-<script src="assets/js/main.js"></script>
+<script src="{{ assetsPath }}assets/js/jquery.min.js"></script>
+<script src="{{ assetsPath }}assets/js/jquery.waypoints.min.js?v=1"></script>
+<script src="{{ assetsPath }}assets/js/main.js"></script>
 </body>
 </html>
