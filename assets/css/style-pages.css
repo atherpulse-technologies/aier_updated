@@ -1,0 +1,214 @@
+@import url(styles.css);
+
+/********************************************************** Common for All Pages **********************************************************/
+.page-heading{
+    color: var(--black-bg);
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.page-sub-heading{
+    color: var(--secodary);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/********************************************************** Home Page **********************************************************/
+#home-page{
+	height: calc(100vh - 60px);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: var(--white);
+
+	background-image: url('https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1517&q=80');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#home-page h1{
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+#home-page h2{
+	display: none;
+}
+
+@media(max-width: 572px){
+	#home-page h1{
+		display: none;
+	}
+	#home-page h2{
+		font-size: 40px;
+		margin-top: -150px;
+		display: block;
+	}
+}
+
+/********************************************************** About us - Home **********************************************************/
+#home-about-us{
+	position: relative;
+	height: calc(100vh - 60px);
+}
+
+.shape-bg{
+	background-color: var(--black-bg);
+	width: 100%;
+	height: 520px;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	left: 50%;
+	top: 50%;
+}
+
+.shape-bg .shape{
+	height: 200px;
+	width: 200px;
+	position: absolute;
+	border-radius: 50%;
+}
+.shape:first-child{
+	background: linear-gradient(
+		 #1845ad,
+		 var(--primary)
+	);
+	left: -80px;
+	top: -80px;
+}
+.shape:last-child{
+	background: linear-gradient(
+		 to right,
+		 #ff512f,
+		 var(--secodary)
+	);
+	right: -30px;
+	bottom: -80px;
+}
+.home-about-us-content{
+	height: 520px;
+	width: 98%;
+	background-color: var(--black-bg-trans);
+	position: absolute;
+	transform: translate(-50%,-50%);
+	top: 50%;
+	left: 50%;
+	border-radius: 10px;
+	backdrop-filter: blur(10px);
+	border: 2px solid rgba(255,255,255,0.1);
+	box-shadow: 0 0 40px rgba(8,7,16,0.6);
+	padding: 50px 35px;
+}
+.home-about-us-content *{
+	font-family: 'Poppins',sans-serif;
+	color: var(--white);
+	letter-spacing: 0.5px;
+	outline: none;
+	border: none;
+}
+.home-about-us-content h3{
+	font-size: 32px;
+	font-weight: 500;
+	line-height: 42px;
+	text-align: center;
+}
+
+@media(max-width: 572px){
+	.home-about-us-content{
+		height: 1000px;
+	}
+
+	.shape-bg{
+		height: 1000px;
+	}
+}
+
+/********************************************************** About us - Main **********************************************************/
+.about-us-main{
+    margin: 40px;
+}
+
+.about-us-main p, .about-us-main li{
+    color: var(--primary);
+}
+
+@media(max-width: 572px){
+	.about-us-main{
+        margin: 20px;
+    }
+}
+
+
+/********************************************************** Services **********************************************************/
+#service-page{
+	text-align: center;
+	position: relative;
+	margin-top: 150px;
+	/* height: calc(100vh - 60px); */
+}
+
+.service-container-box{
+	padding: 43px;
+	background-color: var(--secodary);
+	border-radius: 10px;
+}
+
+.service-container-box, .service-container-box a{
+    color: var(--white);
+}
+
+.service-container-box i{
+	font-size: 88px;
+}
+
+.service-container-box h3{
+	font-size: 24px;
+	font-weight: bold;
+	margin: 16px 0;
+}
+
+.service-container-box:hover, .service-container-box a:hover{
+	color: var(--black-bg);
+}
+
+@media(max-width: 572px){
+	#service-page .col-md-4{
+		margin-top: 20px;
+	}
+}
+
+/********************************************************** Testimonials **********************************************************/
+#testimonial-page{
+	text-align: center;
+	position: relative;
+	margin-top: 120px;
+	/* height: calc(100vh - 60px); */
+}
+
+.testimonial-box{
+	padding: 35px;
+	background-color: var(--primary);
+	border-radius: 5px;
+}
+
+.testimonial-in-box{
+	display: flex;
+	align-items: center;
+	gap: 30px;
+}
+
+.testimonial-in-box img{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+}
+
+@media(max-width: 572px){
+	#testimonial-page .col-md-4{
+		margin-top: 20px;
+	}
+}
