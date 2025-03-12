@@ -3,25 +3,25 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "npm-run-all -p dev:*",
-    "build": "run-s clean build:11ty build:css",
-    "dev:11ty": "eleventy --serve --incremental",
-    "dev:css": "tailwindcss -i src/css/tailwind.css -o _site/css/styles.css --watch",
-    "build:11ty": "ELEVENTY_ENV=production eleventy",
-    "build:css": "tailwindcss -i src/css/tailwind.css -o _site/css/styles.css --minify",
-    "clean": "rm -rf _site"
+    
+  
+        "start": "npm-run-all -p dev:*",
+        "build": "run-s clean build:css build:11ty copy:production",
+        "dev:11ty": "eleventy --serve --incremental",
+        "dev:css": "postcss src/css/tailwind.css -o _site/css/styles.css --watch --verbose",
+        "build:11ty": "ELEVENTY_ENV=production eleventy",
+        "build:css": "NODE_ENV=production postcss src/css/tailwind.css -o _site/css/styles.css",
+        "copy:production": "node ./copy-production.js",
+        "clean": "rm -rf _site"
+   
+    
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
-    "@tailwindcss/cli": "^4.0.13",
     "@tailwindcss/postcss": "^4.0.13",
-    "autoprefixer": "^10.4.21",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.5.3",
+    "postcss-cli": "^10.1.0",
     "tailwindcss": "^4.0.13"
   }
 }

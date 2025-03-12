@@ -1,0 +1,900 @@
+
+
+
+
+
+  
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <!-- Tailwind CSS -->
+        <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+        <link rel="stylesheet" href="../css/styles.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />       
+  
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <!-- Font Awesome -->
+        <!-- <link rel="stylesheet" href="assets/plugins/fontawesome-6.1.1/css/all.css"> -->
+        <title>Adishesha Institute of Education and Research</title>
+        
+        <style>
+            /* Modernized pill divider with blue and accent orange */
+            .pill-divider {
+                position: relative;
+                overflow: hidden;
+                height: 4px;
+            }
+            .pill-divider::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 85%;
+                height: 100%;
+                background-color: #2563eb;
+            }
+            .pill-divider::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 15%;
+                height: 100%;
+                background-color: #f5945c;
+            }
+            
+            .animate-marquee {
+                animation: marquee 30s linear infinite;
+            }
+            @keyframes marquee {
+                0% { transform: translateX(100%); }
+                100% { transform: translateX(-100%); }
+            }
+        </style>
+    </head>
+    
+    <body class="font-sans text-gray-800 bg-light">
+        <!-- Top Bar with Social Icons -->
+        <div class="bg-dark py-2 px-4">
+            <div class="container mx-auto flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-200">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-200">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-200">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-200">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="mailto:info@sinspire.com" class="text-gray-300 hover:text-white text-sm transition duration-200">
+                        <i class="fa-solid fa-envelope mr-2"></i><span class="hidden sm:inline">info@sinspire.com</span>
+                    </a>
+                    <a href="tel:+919876543210" class="text-gray-300 hover:text-white text-sm transition duration-200">
+                        <i class="fa-solid fa-phone mr-2"></i><span class="hidden sm:inline">+91 98765 43210</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Header -->
+        <header class="bg-white sticky top-0 z-50 shadow-md">
+            <!-- Pill Divider -->
+            <div class="pill-divider"></div>
+            
+            <div class="container mx-auto px-4">
+                <div class="flex items-center justify-between">
+                    <!-- Logo - Environment-agnostic approach -->
+                    <div class="py-3 md:py-6">
+                        <a href="../" class="flex items-center">
+                            <img src="../assets/images/logo2.png" class="h-[40px] sm:h-[50px] md:h-[60px] w-auto" alt="S Inspire Logo">
+                        </a>
+                    </div>
+                    
+                    <!-- Desktop Navigation - Using environment-agnostic approach -->
+                    <div class="hidden lg:flex items-center">
+                        <nav class="flex">
+                            <a href="../" class="relative mx-2 px-3 py-6 text-gray-700 font-medium hover:text-primary group">
+                                Home
+                                <span class="absolute inset-x-0 bottom-0 h-1 bg-primary transform scale-x-0 origin-left transition-transform group-hover:scale-x-100 duration-300"></span>
+                            </a>
+                            <a href="../about/" class="relative mx-2 px-4 py-6 text-gray-700 font-medium hover:text-primary group">
+                                About
+                                <span class="absolute inset-x-0 bottom-0 h-1 bg-primary transform scale-x-0 origin-left transition-transform group-hover:scale-x-100 duration-300"></span>
+                            </a>
+                            <a href="../services/" class="relative mx-2 px-4 py-6 text-gray-700 font-medium hover:text-primary group">
+                                Services
+                                <span class="absolute inset-x-0 bottom-0 h-1 bg-primary transform scale-x-0 origin-left transition-transform group-hover:scale-x-100 duration-300"></span>
+                            </a>
+                            <a href="../programs/" class="relative mx-2 px-4 py-6 text-gray-700 font-medium hover:text-primary group">
+                                Programs
+                                <span class="absolute inset-x-0 bottom-0 h-1 bg-primary transform scale-x-0 origin-left transition-transform group-hover:scale-x-100 duration-300"></span>
+                            </a>
+                            <a href="../contact/" class="relative mx-2 px-4 py-6 text-gray-700 font-medium hover:text-primary group">
+                                Contact
+                                <span class="absolute inset-x-0 bottom-0 h-1 bg-primary transform scale-x-0 origin-left transition-transform group-hover:scale-x-100 duration-300"></span>
+                            </a>
+                        </nav>
+                        
+                        <!-- CTA Button with Accent Orange -->
+                        <a href="../enquire/" class="ml-6 px-6 py-3 bg-accent hover:bg-accent/90 text-white font-medium rounded-md hover:shadow-glow-accent transition-all duration-300 transform hover:-translate-y-1">
+                            <i class="fa-solid fa-paper-plane mr-2"></i> Enquire Now
+                        </a>
+                    </div>
+                    
+                    <!-- Mobile menu button -->
+                    <div class="lg:hidden">
+                        <button id="mobile-menu-button" type="button" class="p-2 rounded-md text-gray-500 hover:text-primary hover:bg-gray-100 focus:outline-none" aria-label="Toggle menu">
+                            <i class="fa-solid fa-bars text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Announcement Banner (animated) -->
+            <div class="bg-gradient-to-r from-gradient-start to-gradient-end relative overflow-hidden">
+                <div class="animate-marquee whitespace-nowrap py-2">
+                    <div class="flex items-center text-white mx-4 inline-block">
+                        <i class="fa-solid fa-graduation-cap mr-2"></i>
+                        <span>New courses starting soon! Limited seats available.</span>
+                        <span class="mx-8">•</span>
+                        <i class="fa-solid fa-bullhorn mr-2"></i>
+                        <span>Join our special weekend workshops!</span>
+                        <span class="mx-8">•</span>
+                        <i class="fa-solid fa-calendar-check mr-2"></i>
+                        <span>SSLC and PUC exam preparation courses now open!</span>
+                        <span class="mx-8">•</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile menu (hidden by default) -->
+            <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 py-3 shadow-md">
+                <div class="container mx-auto px-4 space-y-1">
+                    <a href="../" class="block px-4 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-blue-50 hover:text-primary transition-all duration-200">
+                        <i class="fa-solid fa-home mr-2 text-primary opacity-70"></i> Home
+                    </a>
+                    <a href="../about/" class="block px-4 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-blue-50 hover:text-primary transition-all duration-200">
+                        <i class="fa-solid fa-info-circle mr-2 text-primary opacity-70"></i> About
+                    </a>
+                    <a href="../services/" class="block px-4 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-blue-50 hover:text-primary transition-all duration-200">
+                        <i class="fa-solid fa-list-check mr-2 text-primary opacity-70"></i> Services
+                    </a>
+                    <a href="../programs/" class="block px-4 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-blue-50 hover:text-primary transition-all duration-200">
+                        <i class="fa-solid fa-cubes mr-2 text-primary opacity-70"></i> Programs
+                    </a>
+                    <a href="../contact/" class="block px-4 py-3 rounded-md text-base font-medium text-gray-700 hover:bg-blue-50 hover:text-primary transition-all duration-200">
+                        <i class="fa-solid fa-envelope mr-2 text-primary opacity-70"></i> Contact
+                    </a>
+                    <div class="px-4 py-3 mt-4">
+                        <a href="../enquire/" class="block w-full text-center px-4 py-3 bg-accent text-white font-medium rounded-md hover:shadow-md transition-all duration-200">
+                            <i class="fa-solid fa-paper-plane mr-2"></i> Enquire Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <script>
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        </script>
+
+<!-- Page Header Banner -->
+<section class="bg-gradient-to-r from-primary to-secondary text-white py-16 relative overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden">
+        <div class="absolute -right-96 -top-24 w-[500px] h-[500px] bg-white/5 rounded-full"></div>
+        <div class="absolute -left-96 -bottom-24 w-[500px] h-[500px] bg-white/5 rounded-full"></div>
+    </div>
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-3xl">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Our Programs</h1>
+            <p class="text-xl text-white/90">
+                Comprehensive educational programs designed for accelerated learning and excellence
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Program Categories -->
+<section class="py-16 px-4 bg-white">
+    <div class="container mx-auto max-w-6xl">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-3">Educational Programs</h2>
+            <div class="h-1 w-24 bg-primary mx-auto mb-6"></div>
+            <p class="text-gray-600 max-w-3xl mx-auto">
+                At Adishesha Institute, we offer specialized programs across various academic levels, designed with our signature accelerated learning methodology for optimal results.
+            </p>
+        </div>
+        
+        <!-- Program Tabs -->
+        <div class="mb-12">
+            <div class="flex flex-wrap justify-center gap-2 md:gap-4 mb-8">
+                <button class="tab-button active px-4 py-2 rounded-full bg-primary text-white" data-tab="school">School Programs</button>
+                <button class="tab-button px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300 text-gray-700" data-tab="entrance">Entrance Exams</button>
+                <button class="tab-button px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300 text-gray-700" data-tab="civil">Civil Services</button>
+                <button class="tab-button px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300 text-gray-700" data-tab="skill">Skill Development</button>
+            </div>
+        </div>
+        
+        <!-- School Programs Tab Content -->
+        <div id="school" class="tab-content block">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Program 1 -->
+                <div class="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="bg-primary h-2"></div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Class 10 (SSLC)</h3>
+                            <span class="bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full">Fast Track</span>
+                        </div>
+                        <p class="text-gray-600 mb-6">
+                            Comprehensive program covering all SSLC subjects with emphasis on conceptual clarity and exam strategies. Our accelerated learning techniques help students master the syllabus in 40% less time.
+                        </p>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-sm text-gray-700">Complete syllabus coverage</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-sm text-gray-700">Regular practice tests</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-sm text-gray-700">Memory enhancement techniques</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center pt-4 border-t border-gray-100">
+                            <span class="text-gray-500 text-sm">Duration: 6 months</span>
+                            <a href="contact.php" class="text-primary hover:text-accent font-medium text-sm flex items-center">
+                                Details <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Program 2 -->
+                <div class="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="bg-accent h-2"></div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Class 11 (Plus One)</h3>
+                            <span class="bg-accent/10 text-accent text-xs font-bold px-3 py-1 rounded-full">Foundation</span>
+                        </div>
+                        <p class="text-gray-600 mb-6">
+                            Strong foundation program for Plus One students that builds conceptual understanding while preparing for board exams. Also serves as preparation for competitive exams.
+                        </p>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-sm text-gray-700">Subject specialization</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-sm text-gray-700">Concept-based learning</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-sm text-gray-700">Integrated approach with competitive exams</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center pt-4 border-t border-gray-100">
+                            <span class="text-gray-500 text-sm">Duration: Academic year</span>
+                            <a href="contact.php" class="text-primary hover:text-accent font-medium text-sm flex items-center">
+                                Details <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Program 3 -->
+                <div class="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="bg-primary h-2"></div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Class 12 (Plus Two)</h3>
+                            <span class="bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full">Board + Entrance</span>
+                        </div>
+                        <p class="text-gray-600 mb-6">
+                            Dual-focus program that ensures excellent board exam results while simultaneously preparing students for entrance examinations with integrated syllabus coverage.
+                        </p>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-sm text-gray-700">Board exam excellence</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-sm text-gray-700">Entrance exam preparation</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-sm text-gray-700">Advanced problem-solving techniques</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center pt-4 border-t border-gray-100">
+                            <span class="text-gray-500 text-sm">Duration: Academic year</span>
+                            <a href="contact.php" class="text-primary hover:text-accent font-medium text-sm flex items-center">
+                                Details <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Entrance Exams Tab Content -->
+        <div id="entrance" class="tab-content hidden">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Program 1 -->
+                <div class="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="bg-primary h-2"></div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">JEE (Main & Advanced)</h3>
+                            <span class="bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full">Engineering</span>
+                        </div>
+                        <p class="text-gray-600 mb-6">
+                            Intensive program focused on JEE preparation with advanced problem-solving techniques and strategic exam approach. Our methodology ensures thorough understanding of concepts and patterns.
+                        </p>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-sm text-gray-700">Comprehensive subject coverage</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-sm text-gray-700">Mock tests and analysis</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-sm text-gray-700">Problem-solving workshops</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center pt-4 border-t border-gray-100">
+                            <span class="text-gray-500 text-sm">Duration: 12 months</span>
+                            <a href="contact.php" class="text-primary hover:text-accent font-medium text-sm flex items-center">
+                                Details <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Program 2 -->
+                <div class="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="bg-accent h-2"></div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">NEET</h3>
+                            <span class="bg-accent/10 text-accent text-xs font-bold px-3 py-1 rounded-full">Medical</span>
+                        </div>
+                        <p class="text-gray-600 mb-6">
+                            Specialized program for medical aspirants aiming at NEET with focus on Biology, Chemistry, and Physics. Our unique approach integrates theory with practical applications.
+                        </p>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-sm text-gray-700">Subject-wise focused training</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-sm text-gray-700">Regular tests and evaluations</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-sm text-gray-700">Memory techniques for biology</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center pt-4 border-t border-gray-100">
+                            <span class="text-gray-500 text-sm">Duration: 12 months</span>
+                            <a href="contact.php" class="text-primary hover:text-accent font-medium text-sm flex items-center">
+                                Details <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Program 3 -->
+                <div class="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="bg-primary h-2"></div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">CUET</h3>
+                            <span class="bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full">University</span>
+                        </div>
+                        <p class="text-gray-600 mb-6">
+                            Targeted preparation for Common University Entrance Test with domain-specific training and comprehensive practice. Our approach helps students tackle all sections effectively.
+                        </p>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-sm text-gray-700">Section-wise preparation</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-sm text-gray-700">Language proficiency training</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-sm text-gray-700">Domain subject expertise</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center pt-4 border-t border-gray-100">
+                            <span class="text-gray-500 text-sm">Duration: 6 months</span>
+                            <a href="contact.php" class="text-primary hover:text-accent font-medium text-sm flex items-center">
+                                Details <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Civil Services Tab Content -->
+        <div id="civil" class="tab-content hidden">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Program 1 -->
+                <div class="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="bg-primary h-2"></div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">UPSC Foundation</h3>
+                            <span class="bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full">Beginner</span>
+                        </div>
+                        <p class="text-gray-600 mb-6">
+                            Foundation program for Civil Services aspirants covering basics of all subjects and developing a strong conceptual understanding for long-term preparation.
+                        </p>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-sm text-gray-700">Comprehensive subject introduction</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-sm text-gray-700">Current affairs analysis</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-sm text-gray-700">Reading and note-making skills</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center pt-4 border-t border-gray-100">
+                            <span class="text-gray-500 text-sm">Duration: 8 months</span>
+                            <a href="contact.php" class="text-primary hover:text-accent font-medium text-sm flex items-center">
+                                Details <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Program 2 -->
+                <div class="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="bg-accent h-2"></div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">UPSC Prelims</h3>
+                            <span class="bg-accent/10 text-accent text-xs font-bold px-3 py-1 rounded-full">Advanced</span>
+                        </div>
+                        <p class="text-gray-600 mb-6">
+                            Focused preparation for Prelims with comprehensive coverage of CSAT and General Studies. Our approach emphasizes pattern recognition and strategic elimination.
+                        </p>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-sm text-gray-700">Extensive test series</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-sm text-gray-700">Previous year analysis</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-sm text-gray-700">Subject-wise strategy sessions</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center pt-4 border-t border-gray-100">
+                            <span class="text-gray-500 text-sm">Duration: 6 months</span>
+                            <a href="contact.php" class="text-primary hover:text-accent font-medium text-sm flex items-center">
+                                Details <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Program 3 -->
+                <div class="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="bg-primary h-2"></div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">UPSC Mains & Interview</h3>
+                            <span class="bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full">Expert</span>
+                        </div>
+                        <p class="text-gray-600 mb-6">
+                            Specialized program for Mains and Interview preparation with focus on answer writing, essay practice, and personality development for interview success.
+                        </p>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-sm text-gray-700">Answer writing workshops</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-sm text-gray-700">Essay guidance and feedback</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-sm text-gray-700">Mock interviews with experts</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center pt-4 border-t border-gray-100">
+                            <span class="text-gray-500 text-sm">Duration: 8 months</span>
+                            <a href="contact.php" class="text-primary hover:text-accent font-medium text-sm flex items-center">
+                                Details <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Skill Development Tab Content -->
+        <div id="skill" class="tab-content hidden">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Program 1 -->
+                <div class="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="bg-primary h-2"></div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Memory Enhancement</h3>
+                            <span class="bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full">Cognitive</span>
+                        </div>
+                        <p class="text-gray-600 mb-6">
+                            Specialized training to develop photographic memory, enhanced recall, and long-term retention using advanced mnemonic techniques and brain training exercises.
+                        </p>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-sm text-gray-700">Mnemonic techniques</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-sm text-gray-700">Mind mapping methods</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-sm text-gray-700">Memory palace training</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center pt-4 border-t border-gray-100">
+                            <span class="text-gray-500 text-sm">Duration: 3 months</span>
+                            <a href="contact.php" class="text-primary hover:text-accent font-medium text-sm flex items-center">
+                                Details <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Program 2 -->
+                <div class="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="bg-accent h-2"></div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Speed Reading</h3>
+                            <span class="bg-accent/10 text-accent text-xs font-bold px-3 py-1 rounded-full">Efficiency</span>
+                        </div>
+                        <p class="text-gray-600 mb-6">
+                            Learn to read 3-5 times faster with improved comprehension using advanced techniques that eliminate subvocalization and enhance information processing.
+                        </p>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-sm text-gray-700">Chunking techniques</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-sm text-gray-700">Peripheral vision training</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-sm text-gray-700">Comprehension exercises</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center pt-4 border-t border-gray-100">
+                            <span class="text-gray-500 text-sm">Duration: 2 months</span>
+                            <a href="contact.php" class="text-primary hover:text-accent font-medium text-sm flex items-center">
+                                Details <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Program 3 -->
+                <div class="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="bg-primary h-2"></div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Public Speaking</h3>
+                            <span class="bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full">Communication</span>
+                        </div>
+                        <p class="text-gray-600 mb-6">
+                            Build confidence and master the art of effective public speaking with our comprehensive program covering all aspects from content preparation to delivery techniques.
+                        </p>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-sm text-gray-700">Speech structure and content</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-sm text-gray-700">Voice modulation training</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-sm text-gray-700">Body language mastery</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center pt-4 border-t border-gray-100">
+                            <span class="text-gray-500 text-sm">Duration: 4 months</span>
+                            <a href="contact.php" class="text-primary hover:text-accent font-medium text-sm flex items-center">
+                                Details <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Tab Switching JavaScript -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Deactivate all buttons
+                tabButtons.forEach(btn => {
+                    btn.classList.remove('active', 'bg-primary', 'text-white');
+                    btn.classList.add('bg-gray-200', 'text-gray-700');
+                });
+                
+                // Activate clicked button
+                button.classList.add('active', 'bg-primary', 'text-white');
+                button.classList.remove('bg-gray-200', 'text-gray-700');
+                
+                // Hide all tab contents
+                tabContents.forEach(content => {
+                    content.classList.add('hidden');
+                    content.classList.remove('block');
+                });
+                
+                // Show selected tab content
+                const tabId = button.getAttribute('data-tab');
+                document.getElementById(tabId).classList.remove('hidden');
+                document.getElementById(tabId).classList.add('block');
+            });
+        });
+    });
+</script>
+
+
+
+  
+
+
+
+
+
+
+
+<!-- Footer -->
+<footer class="bg-dark pt-16 pb-8 text-white">
+    <!-- Blue with Orange Accent Pill Divider -->
+    <div class="pill-divider mb-12"></div>
+    
+    <div class="container mx-auto px-4">
+        <!-- Main Footer Content -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            <!-- About Us Column -->
+            <div>
+                <div class="mb-6">
+                    <img src="../assets/images/logo2.png" alt="Adishesha Institute" class="h-20">
+                </div>
+                <p class="text-gray-300 mb-6 text-sm">
+                    Adishesha Institute of Education & Research is dedicated to providing exceptional educational experiences that empower students to achieve their full potential.
+                </p>
+                <div class="flex space-x-3">
+                    <a href="#" class="bg-primary hover:bg-secondary text-white p-2 rounded-full transition duration-300">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="bg-primary hover:bg-secondary text-white p-2 rounded-full transition duration-300">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="bg-primary hover:bg-secondary text-white p-2 rounded-full transition duration-300">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="bg-primary hover:bg-secondary text-white p-2 rounded-full transition duration-300">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-lg font-semibold mb-6 inline-block relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-12 after:h-1 after:bg-primary after:-mb-2 pb-2">
+                    Quick Links
+                </h3>
+                <ul class="space-y-3 text-gray-300">
+                    <li>
+                        <a href="../" class="hover:text-accent transition duration-300 flex items-center">
+                            <i class="fas fa-chevron-right mr-2 text-xs text-primary"></i> Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../about/" class="hover:text-accent transition duration-300 flex items-center">
+                            <i class="fas fa-chevron-right mr-2 text-xs text-primary"></i> About Us
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../services/" class="hover:text-accent transition duration-300 flex items-center">
+                            <i class="fas fa-chevron-right mr-2 text-xs text-primary"></i> Services
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../programs/" class="hover:text-accent transition duration-300 flex items-center">
+                            <i class="fas fa-chevron-right mr-2 text-xs text-primary"></i> Programs
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../contact/" class="hover:text-accent transition duration-300 flex items-center">
+                            <i class="fas fa-chevron-right mr-2 text-xs text-primary"></i> Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Contact Information -->
+            <div>
+                <h3 class="text-lg font-semibold mb-6 inline-block relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-12 after:h-1 after:bg-primary after:-mb-2 pb-2">
+                    Contact Us
+                </h3>
+                <ul class="space-y-4 text-gray-300">
+                    <li class="flex items-start">
+                        <div class="bg-primary/20 p-2 rounded-full mr-3 mt-1">
+                            <i class="fas fa-map-marker-alt text-primary"></i>
+                        </div>
+                        <span>
+                            123 Education Street, <br>
+                            Bengaluru, Karnataka 560001
+                        </span>
+                    </li>
+                    <li class="flex items-center">
+                        <div class="bg-primary/20 p-2 rounded-full mr-3">
+                            <i class="fas fa-phone-alt text-primary"></i>
+                        </div>
+                        <a href="tel:+919876543210" class="hover:text-accent transition duration-300">
+                            +91 98765 43210
+                        </a>
+                    </li>
+                    <li class="flex items-center">
+                        <div class="bg-primary/20 p-2 rounded-full mr-3">
+                            <i class="fas fa-envelope text-primary"></i>
+                        </div>
+                        <a href="mailto:info@sinspire.com" class="hover:text-accent transition duration-300">
+                            info@sinspire.com
+                        </a>
+                    </li>
+                    <li class="flex items-center">
+                        <div class="bg-primary/20 p-2 rounded-full mr-3">
+                            <i class="fas fa-clock text-primary"></i>
+                        </div>
+                        <span>
+                            Mon - Sat: 9:00 AM - 6:00 PM
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Newsletter -->
+            <div>
+                <h3 class="text-lg font-semibold mb-6 inline-block relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-12 after:h-1 after:bg-primary after:-mb-2 pb-2">
+                    Newsletter
+                </h3>
+                <p class="text-gray-300 mb-4 text-sm">
+                    Subscribe to our newsletter for updates on courses, events, and educational resources.
+                </p>
+                <form action="#" method="post" class="space-y-3">
+                    <div class="relative">
+                        <input type="email" placeholder="Enter your email" class="w-full py-3 px-4 rounded-full bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary">
+                        <button type="submit" class="absolute right-1.5 top-1.5 bg-accent hover:bg-accent/90 text-white px-4 py-1.5 rounded-md transition-all duration-300">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Google Map with Blue Border -->
+        <div class="mb-12 rounded-lg overflow-hidden shadow-lg p-1 bg-primary">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248849.90089883756!2d77.46612530528805!3d12.953945613435485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1710728221674!5m2!1sen!2sin" 
+                width="100%" 
+                height="300" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
+        <!-- Divider with Blue Gradient -->
+        <div class="h-px bg-gradient-to-r from-primary via-gray-700 to-primary my-8"></div>
+        
+        <!-- Bottom Footer -->
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="text-gray-400 text-sm mb-4 md:mb-0">
+                &copy; <script>document.write(new Date().getFullYear())</script> Adishesha Institute of Education & Research. All rights reserved.
+            </div>
+            <div class="flex flex-wrap justify-center md:justify-end gap-4 text-gray-400 text-sm">
+                <a href="../privacy-policy/" class="hover:text-accent transition duration-300">Privacy Policy</a>
+                <a href="../terms/" class="hover:text-accent transition duration-300">Terms of Service</a>
+                <a href="../sitemap/" class="hover:text-accent transition duration-300">Sitemap</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Back to Top Button -->
+<a id="back-to-top" href="#" class="fixed bottom-6 right-6 bg-accent text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 scale-0 hover:shadow-glow-accent">
+    <i class="fas fa-chevron-up"></i>
+</a>
+
+<!-- Scripts -->
+<script>
+    // Back to top button
+    const backToTopButton = document.getElementById('back-to-top');
+    
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            backToTopButton.classList.remove('scale-0');
+            backToTopButton.classList.add('scale-100');
+        } else {
+            backToTopButton.classList.remove('scale-100');
+            backToTopButton.classList.add('scale-0');
+        }
+    });
+    
+    backToTopButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/jquery.waypoints.min.js?v=1"></script>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
