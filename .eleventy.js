@@ -2,7 +2,9 @@ const fs = require("fs");
 const path = require("path");
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("src/assets");
+  eleventyConfig.addPassthroughCopy("./src/assets");
+  // eleventyConfig.addWatchTarget("./src/**/*.njk");
+  // eleventyConfig.addWatchTarget("./src/");
 
   const outputDir = path.resolve(__dirname, "_site"); // Eleventy's output directory
   const projectRoot = path.resolve(__dirname); // Root of the project

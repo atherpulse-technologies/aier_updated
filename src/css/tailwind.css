@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* Raw RGB values without alpha */
+    --primary-rgb: 37 99 235;
+    --secondary-rgb: 30 64 175;
+    --accent-rgb: 245 148 92;
+    --dark-rgb: 15 23 42;
+    --light-rgb: 248 250 252;
+    --gradient-start-rgb: 59 130 246;
+    --gradient-end-rgb: 29 78 216;
+  }
+}
+
+@theme {
+  /* Color definitions with alpha support */
+  --color-primary: rgb(var(--primary-rgb) / var(--tw-bg-opacity, 1));
+  --color-secondary: rgb(var(--secondary-rgb) / var(--tw-text-opacity, 1));
+  --color-accent: rgb(var(--accent-rgb) / var(--tw-border-opacity, 1));
+  --color-dark: rgb(var(--dark-rgb) / 1);
+  --color-light: rgb(var(--light-rgb) / 1);
+  --color-gradient-start: rgb(var(--gradient-start-rgb) / 1);
+  --color-gradient-end: rgb(var(--gradient-end-rgb) / 1);
+
+  /* Font configuration */
+  --font-family-sans: 'Inter', system-ui, sans-serif;
+
+  /* Shadow definitions */
+  --shadow-soft: 0 4px 20px rgb(0 0 0 / 0.05);
+  --shadow-glow: 0 0 15px rgb(var(--primary-rgb) / 0.5);
+  --shadow-glow-accent: 0 5px 15px rgb(var(--accent-rgb) / 0.3);
+}
