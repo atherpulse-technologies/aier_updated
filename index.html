@@ -91,6 +91,42 @@
     </head>
     
     <body class="font-sans text-gray-800 bg-light">
+
+
+        <style>
+            /* Modernized pill divider with blue and accent orange */
+            .pill-divider {
+                position: relative;
+                overflow: hidden;
+                height: 4px;
+            }
+            .pill-divider::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 85%;
+                height: 100%;
+                background-color: #2563eb;
+            }
+            .pill-divider::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 15%;
+                height: 100%;
+                background-color: #f5945c;
+            }
+            
+            .animate-marquee {
+                animation: marquee 30s linear infinite;
+            }
+            @keyframes marquee {
+                0% { transform: translateX(100%); }
+                100% { transform: translateX(-100%); }
+            }
+        </style>
         <!-- Top Bar with Social Icons -->
         <div class="bg-dark py-2 px-4">
             <div class="container mx-auto flex justify-between items-center">
@@ -127,9 +163,9 @@
             <div class="container mx-auto px-4">
                 <div class="flex items-center justify-between">
                     <!-- Logo - Environment-agnostic approach -->
-                    <div class="py-2 md:py-4">
+                    <div class="py-3 md:py-6">
                         <a href="./" class="flex items-center">
-                            <img src="assets/images/logo2.png" class="h-[30px] sm:h-[35px] md:h-[40px] w-auto" alt="S Inspire Logo">
+                            <img src="assets/images/logo2.png" class="h-[40px] sm:h-[50px] md:h-[60px] w-auto" alt="S Inspire Logo">
                         </a>
                     </div>
                     
@@ -226,8 +262,6 @@
                 mobileMenu.classList.toggle('hidden');
             });
         </script>
-    </body>
-</html>
 
 <!-- Hero Section with Background Image and Full Viewport Height -->
 <section class="relative h-screen flex items-center bg-gradient-to-r from-primary to-secondary text-white">
