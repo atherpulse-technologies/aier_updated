@@ -2,10 +2,6 @@
 
 
 
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -163,9 +159,9 @@
             <div class="container mx-auto px-4">
                 <div class="flex items-center justify-between">
                     <!-- Logo - Environment-agnostic approach -->
-                    <div class="py-3 md:py-6">
+                    <div class="py-3 md:py-4">
                         <a href="./" class="flex items-center">
-                            <img src="assets/images/logo2.png" class="h-[40px] sm:h-[50px] md:h-[60px] w-auto" alt="S Inspire Logo">
+                            <img src="assets/images/logo2.png" class="h-[40px] sm:h-[50px] md:h-[40px] w-auto" alt="S Inspire Logo">
                         </a>
                     </div>
                     
@@ -264,39 +260,121 @@
         </script>
 
 <!-- Hero Section with Background Image and Full Viewport Height -->
-<section class="relative h-screen flex items-center bg-gradient-to-r from-primary to-secondary text-white">
+<section class="relative min-h-screen flex flex-col justify-between bg-gradient-to-r from-primary to-secondary text-white pb-16">
     <!-- Background Image with Overlay -->
     <div class="absolute inset-0 z-0">
-        <img src="assets/images/web/education-hero.jpg" alt="Education Background" class="w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-secondary/90"></div>
+        <img src="https://images.unsplash.com/photo-1495995424756-6a5a3f9e7543?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Education Background" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-r from-primary/95 to-secondary/95"></div>
     </div>
     
-    
     <!-- Hero Content -->
-    <div class="container mx-auto max-w-6xl px-4 relative z-10">
-        <div class="md:max-w-3xl">
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                Welcome to <br> Adishesha Institute of Education & Research
+    <div class="container mx-auto max-w-7xl px-4 relative z-10 pt-20">
+        <div class="text-center max-w-6xl mx-auto mb-20">
+            <div class="inline-block bg-white/10 backdrop-blur-sm px-6 py-2 rounded-full mb-6">
+                <span class="text-white/90 font-medium">Transforming Education Since 2020</span>
+            </div>
+            <h1 class="text-5xl md:text-6xl lg:text-8xl font-bold mb-8 leading-tight">
+                Speed up your studies <br>
+                <span class="text-accent bg-accent bg-clip-text text-transparent">
+                    Like Never Before
+                </span>
             </h1>
-            <p class="text-xl md:text-2xl opacity-90 mb-10">
-                Improve your educational skills and achieve your goal.
+            <p class="text-2xl md:text-3xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
+                Join a community where innovation meets education, and excellence becomes a habit.
             </p>
-            <div class="flex flex-wrap gap-4">
-                <a href="contact.php" class="inline-block bg-accent text-white font-medium py-3 px-8 rounded-lg shadow-lg hover:bg-accent/90 hover:shadow-glow-accent transition duration-300">
-                    Get Started
+            <div class="flex flex-wrap gap-6 justify-center items-center mb-16">
+                <a href="contact.php" class="inline-flex items-center bg-accent text-white font-medium py-4 px-10 rounded-lg shadow-lg hover:bg-accent/90 hover:shadow-glow-accent transition duration-300 text-lg">
+                    Begin Your Journey
+                    <i class="fas fa-arrow-right ml-2"></i>
                 </a>
-                <a href="#learn-more" class="inline-flex items-center bg-white/20 backdrop-blur-sm text-white font-medium py-3 px-8 rounded-lg border border-white/30 hover:bg-white/30 transition duration-300">
-                    Learn More <i class="fas fa-arrow-down ml-2"></i>
+                <a href="#video-tour" class="inline-flex items-center bg-white/20 backdrop-blur-sm text-white font-medium py-4 px-10 rounded-lg border border-white/30 hover:bg-white/30 transition duration-300 text-lg group">
+                        <i class="fas fa-play text-sm"></i>
+                                          
+                    Watch Campus Tour
+
                 </a>
+            </div>
+        </div>
+
+        <!-- Video Players Grid -->
+        <div id="video-tour" class="grid md:grid-cols-3 gap-8 lg:gap-10">
+            <!-- Video Card 1 -->
+            <div class="bg-white/10 backdrop-blur-md rounded-2xl overflow-hidden shadow-xl hover:transform hover:scale-105 transition duration-300">
+                <div class="relative pt-[56.25%] overflow-hidden">
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center group">
+                        <img src="assets/images/web/campus-life.jpg" alt="Campus Life" class="w-full h-full object-cover opacity-90 group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <button class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-accent/90 hover:bg-accent text-white w-16 h-16 rounded-full flex items-center justify-center transform transition duration-300 group-hover:scale-110">
+                            <i class="fas fa-play text-2xl"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-white mb-2">Campus Experience</h3>
+                    <p class="text-white/80">Discover our world-class facilities</p>
+                </div>
+            </div>
+
+            <!-- Video Card 2 -->
+            <div class="bg-white/10 backdrop-blur-md rounded-2xl overflow-hidden shadow-xl hover:transform hover:scale-105 transition duration-300">
+                <div class="relative pt-[56.25%] overflow-hidden">
+                    <!-- Replace '#' with actual video source -->
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center group">
+                        <img src="assets/images/web/student-success.jpg" alt="Student Success" class="w-full h-full object-cover opacity-90 group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <button class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary/90 hover:bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center transform transition duration-300 group-hover:scale-110">
+                            <i class="fas fa-play text-2xl"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-white mb-2">Student Success</h3>
+                    <p class="text-white/80">Hear from our successful alumni</p>
+                </div>
+            </div>
+
+            <!-- Video Card 3 -->
+            <div class="bg-white/10 backdrop-blur-md rounded-2xl overflow-hidden shadow-xl hover:transform hover:scale-105 transition duration-300">
+                <div class="relative pt-[56.25%] overflow-hidden">
+                    <!-- Replace '#' with actual video source -->
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center group">
+                        <img src="assets/images/web/our-programs.jpg" alt="Our Programs" class="w-full h-full object-cover opacity-90 group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <button class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-accent/90 hover:bg-accent text-white w-16 h-16 rounded-full flex items-center justify-center transform transition duration-300 group-hover:scale-110">
+                            <i class="fas fa-play text-2xl"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-white mb-2">Our Programs</h3>
+                    <p class="text-white/80">Explore our diverse course offerings</p>
+                </div>
             </div>
         </div>
     </div>
     
-    <!-- Scroll Down Indicator -->
-    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-        <a href="#learn-more" class="text-white/80 hover:text-white">
-            <i class="fas fa-chevron-down text-2xl"></i>
-        </a>
+    <!-- Statistics Bar -->
+    <div class="relative z-10 mt-16 border border-white/20">
+        <div class="container mx-auto max-w-7xl px-4 py-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-4xl font-bold text-accent mb-2">5000+</div>
+                    <div class="text-white/80">Students Enrolled</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-accent mb-2">95%</div>
+                    <div class="text-white/80">Success Rate</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-accent mb-2">50+</div>
+                    <div class="text-white/80">Expert Faculty</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-accent mb-2">20+</div>
+                    <div class="text-white/80">Programs</div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
