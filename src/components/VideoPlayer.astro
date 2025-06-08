@@ -1,0 +1,52 @@
+---
+interface Props {
+  videoId: string;
+  title: string;
+  description: string;
+  autoplay?: boolean;
+}
+
+const { videoId, title, description, autoplay = false } = Astro.props;
+---
+
+<div class="video-card bg-white/10 backdrop-blur-md rounded-2xl overflow-hidden shadow-xl hover:transform hover:scale-105 transition duration-300">
+  <div class="relative w-full aspect-video">
+    <iframe
+      id={`video-${videoId}`}
+      class="absolute inset-0 w-full h-full rounded-t-2xl"
+      src={`https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1&showinfo=0&controls=1&iv_load_policy=3&fs=0&disablekb=1&playsinline=1${autoplay ? '&autoplay=1' : ''}`}
+      title={title}
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+  </div>
+  <div class="p-6">
+    <h3 class="text-xl font-semibold text-white mb-2">{title}</h3>
+    <p class="text-white/80">{description}</p>
+  </div>
+</div>
+
+<script>
+// Pause other videos when one starts playing
+document.addEventListener('astro:page-load', () => {
+  const iframes = document.querySelectorAll('iframe[id^="video-"]');
+  
+  window.addEventListener('message', (event) => {
+    if (event.origin !== 'https://www.youtube.com') return;
+    
+    try {
+      const data = JSON.parse(event.data);
+      if (data.event === 'onStateChange' && data.info === 1) { // Video started playing
+        iframes.forEach(iframe => {
+          if (iframe !== event.target) {
+            // Post message to pause other videos
+            iframe.contentWindow?.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+          }
+        });
+      }
+    } catch (e) {
+      // Handle parsing error
+    }
+  });
+});
+</script>
