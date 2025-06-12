@@ -13,6 +13,7 @@
     "@videojs/http-streaming": "^3.17.0",
     "@videojs/themes": "^1.0.1",
     "astro": "^5.8.0",
+    "plyr": "^3.7.8",
     "tailwindcss": "^4.1.7",
     "video.js": "^8.23.3",
     "videojs-youtube": "^3.0.1"

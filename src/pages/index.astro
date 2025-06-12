@@ -2,26 +2,7 @@
 import VideoPlayer from '../components/VideoPlayer.astro';
 import BaseLayout from "../layouts/baselayout.astro";
 
-const videos = [
-  {
-    videoId: 'aysnrlGW6FQ',
-    title: 'Campus Experience',
-    description: 'Discover our world-class facilities',
-    autoplay: false
-  },
-  {
-    videoId: 'dOLpUX_X1K8', 
-    title: 'Student Success',
-    description: 'Hear from our successful alumni',
-    autoplay: true
-  },
-  {
-    videoId: '5PYjFLMoxOg',
-    title: 'Our Programs',
-    description: 'Explore our diverse course offerings',
-    autoplay: false
-  }
-];
+
 ---
 
 <BaseLayout>
@@ -65,10 +46,8 @@ const videos = [
         </div>
 
         <!-- Video Players Grid -->
-        <div id="video-tour" class="grid md:grid-cols-3 gap-8 lg:gap-10">
-          {videos.map((video) => (
-            <VideoPlayer {...video} />
-          ))}
+        <div id="video-tour" class="grid md:grid-cols-1 gap-8 lg:gap-10">
+       <VideoPlayer videoId="aysnrlGW6FQ" autoplay={true} />
         </div>
     </div>
     
