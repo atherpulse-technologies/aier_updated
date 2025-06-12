@@ -46,8 +46,10 @@ import BaseLayout from "../layouts/baselayout.astro";
         </div>
 
         <!-- Video Players Grid -->
-        <div id="video-tour" class="grid md:grid-cols-1 gap-8 lg:gap-10">
-       <VideoPlayer videoId="aysnrlGW6FQ" autoplay={true} />
+        <div id="video-tour" class="max-w-[400px] mx-auto"> <!-- Changed this line -->
+          <div class="relative w-full" style="aspect-ratio: 9/16;"> <!-- Added this wrapper -->
+            <VideoPlayer videoId="aysnrlGW6FQ" autoplay={true} />
+          </div>
         </div>
     </div>
     

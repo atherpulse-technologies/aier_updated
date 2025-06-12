@@ -1,35 +1,30 @@
 ---
 import { onMount } from 'astro/client';
-interface Props {
-  videoId: string;
-  title?: string;
-  description?: string;
-  autoplay?: boolean;
-}
-
-const { videoId, title, description, autoplay = false }
-  = Astro.props;
 ---
-<!-- 🧩 Plyr CSS from CDN (put in layout or here) -->
+
+<!-- ✅ Include Plyr CSS from CDN -->
 <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
 
-<!-- 🌐 YouTube Embed with Plyr UI only -->
-<div
-  class="plyr__video-embed"
+<!-- 🎥 Self-hosted video -->
+<video
   id="player"
-  data-plyr-provider="youtube"
-  data-plyr-embed-id={`${videoId}`}
-></div>
+  playsinline
+  autoplay
+  muted
+  controls
+  width="100%"
+>
+  <source src="/video/promo.mp4" type="video/mp4" />
+  Your browser does not support HTML5 video.
+</video>
 
-<!-- 📜 Plyr JS from CDN -->
+<!-- ✅ Include Plyr JS from CDN -->
 <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
 
-<!-- 🚀 Init Plyr and autoplay -->
+<!-- 🧠 Init Plyr player -->
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const player = new Plyr('#player', {
-      autoplay: true,
-      muted: false, // Might be blocked by browser policy
       controls: [
         'play',
         'progress',
@@ -38,18 +33,8 @@ const { videoId, title, description, autoplay = false }
         'volume',
         'fullscreen'
       ],
-      youtube: {
-        noCookie: true,
-        rel: 0,
-        showinfo: 0,
-        modestbranding: 1
-      }
-    });
-
-    player.once('ready', () => {
-      player.play().catch(err => {
-        console.warn('Autoplay failed (browser policy):', err);
-      });
+      autoplay: true,
+      muted: true,
     });
   });
 </script>
