@@ -1,0 +1,83 @@
+---
+import BaseLayout from "../../layouts/baselayout.astro";
+---
+
+<BaseLayout>
+  <section class="bg-primary text-white py-16">
+    <div class="container mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">ACE Course</h1>
+      <p class="text-xl opacity-90">Achievement Centered Education for Job-Oriented Success</p>
+    </div>
+  </section>
+
+  <section class="py-16 px-4">
+    <div class="container mx-auto max-w-4xl">
+      <div class="prose prose-lg max-w-none">
+        <div class="bg-accent/10 p-6 rounded-lg mb-8">
+          <h2 class="text-2xl font-bold text-accent mb-4">Program Overview</h2>
+          <p class="text-gray-700">
+            ACE COURSE is a goal-specific learning platform designed for aspirants preparing for competitive job exams like PSC, UPSC, SSC, RRB, and Bank coaching. It stands for Achievement Centered Education, and is built to help students secure government or public sector jobs through strategic preparation.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+          <div>
+            <h3 class="text-xl font-bold mb-4">Exam Categories</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                <span>PSC (Public Service Commission)</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                <span>UPSC (Union Public Service Commission)</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                <span>SSC (Staff Selection Commission)</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                <span>RRB (Railway Recruitment Board)</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                <span>Banking Sector Exams</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 class="text-xl font-bold mb-4">Training Focus</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <i class="fas fa-star text-yellow-500 mt-1 mr-3"></i>
+                <span>Syllabus mastery and coverage</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-star text-yellow-500 mt-1 mr-3"></i>
+                <span>Practice tests and analysis</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-star text-yellow-500 mt-1 mr-3"></i>
+                <span>Time management strategies</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-star text-yellow-500 mt-1 mr-3"></i>
+                <span>Current affairs and GK</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-gray-50 p-8 rounded-lg">
+          <h2 class="text-2xl font-bold mb-6">Achieve Your Career Goals</h2>
+          <p class="mb-6">Turn your dream job into reality with our proven achievement-centered approach.</p>
+          <a href="/contact" class="inline-block bg-primary text-white font-medium px-8 py-3 rounded-lg hover:bg-primary/90 transition duration-300">
+            Start Your Journey
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

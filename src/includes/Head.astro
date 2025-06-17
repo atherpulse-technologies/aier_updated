@@ -126,7 +126,7 @@ import logo from '../assets/images/logo2.png';
             .pill-divider {
                 position: relative;
                 overflow: hidden;
-                height: 4px;
+                height: 2px;
             }
             .pill-divider::before {
                 content: "";
@@ -158,50 +158,51 @@ import logo from '../assets/images/logo2.png';
     </head>
     <body class="font-sans text-gray-800 bg-light">
         <!-- Top Bar with Social Icons -->
-        <div class="bg-dark py-2 px-4">
-            <div class="container mx-auto flex justify-between items-center">
-                <div class="flex items-center space-x-4">
-                    <a href="#" class="text-gray-400 hover:text-white transition duration-200">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition duration-200">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition duration-200">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition duration-200">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                </div>
-                <div class="flex items-center space-x-6">
-                    <a href="mailto:info@sinspire.com" class="text-gray-300 hover:text-white text-sm transition duration-200">
-                        <i class="fa-solid fa-envelope mr-2"></i>
-                        <span class="hidden sm:inline">info@sinspire.com</span>
-                    </a>
-                    <a href="tel:+919876543210" class="text-gray-300 hover:text-white text-sm transition duration-200">
-                        <i class="fa-solid fa-phone mr-2"></i>
-                        <span class="hidden sm:inline">+91 98765 43210</span>
-                    </a>
-                </div>
-            </div>
-        </div>
+       
 
         <!-- Main Header -->
         <header class="bg-white sticky top-0 z-50 shadow-md">
+            <div class="bg-dark py-1 px-4">
+                <div class="container mx-auto flex justify-between items-center">
+                    <div class="flex items-center space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-200">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-200">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-200">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-200">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                    <div class="flex items-center space-x-6">
+                        <a href="mailto:info@sinspire.com" class="text-gray-300 hover:text-white text-sm transition duration-200">
+                            <i class="fa-solid fa-envelope mr-2"></i>
+                            <span class="hidden sm:inline">aier@sinspire.in</span>
+                        </a>
+                        <a href="tel:+919876543210" class="text-gray-300 hover:text-white text-sm transition duration-200">
+                            <i class="fa-solid fa-phone mr-2"></i>
+                            <span class="hidden sm:inline">+91 8301 933 420</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
             <div class="pill-divider"></div>
 
             <div class="container mx-auto px-4">
                 <div class="flex items-center justify-between">
                     <!-- Logo -->
-                    <div class="py-3 md:py-4">
+                    <div class="py-3 md:py-2">
                         <a href={isHome ? '/' : `/${currentPath}`} class="flex items-center">
                             <Image
                                 src={logo}
                                 alt="S Inspire Logo"
                                 width={200}
-                                height={50}
-                                class="h-[40px] sm:h-[50px] md:h-[40px] w-auto"
+                                height={40}
+                                class="h-[30px] sm:h-[50px] md:h-[40px] w-auto"
                             />
                         </a>
                     </div>
@@ -224,7 +225,7 @@ import logo from '../assets/images/logo2.png';
                                     ]}
                                 >
                                     {label}
-                                    <span class="absolute inset-x-0 bottom-0 h-1 bg-primary transform scale-x-0 origin-left transition-transform group-hover:scale-x-100 duration-300"></span>
+                                    <span class="absolute inset-x-0 bottom-0 h-1 bg-primary transform scale-x-0 origin-left transition-transform duration-300"></span>
                                 </a>
                             ))}
                         </nav>
@@ -254,16 +255,16 @@ import logo from '../assets/images/logo2.png';
 
             <!-- Announcement Banner -->
             <div class="bg-gradient-to-r from-gradient-start to-gradient-end relative overflow-hidden">
-                <div class="animate-marquee whitespace-nowrap py-2">
+                <div class="animate-marquee whitespace-nowrap py-1">
                     <div class="flex items-center text-white mx-4 inline-block">
                         <i class="fa-solid fa-graduation-cap mr-2"></i>
-                        <span>New courses starting soon! Limited seats available.</span>
+                        <span>New SSLC batches start soon! Limited seats available.</span>
                         <span class="mx-8">•</span>
                         <i class="fa-solid fa-bullhorn mr-2"></i>
-                        <span>Join our special weekend workshops!</span>
+                        <span>Crack JEE and NEET with Ease</span>
                         <span class="mx-8">•</span>
                         <i class="fa-solid fa-calendar-check mr-2"></i>
-                        <span>SSLC and PUC exam preparation courses now open!</span>
+                        <span>Cure and Brainy courses are live now !</span>
                         <span class="mx-8">•</span>
                     </div>
                 </div>
