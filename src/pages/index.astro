@@ -68,30 +68,23 @@ const testimonialData = [
                         Begins Here
                     </span>
                 </h1>
-                <p
-                    class="text-2xl md:text-3xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed"
-                >
-                    Join a community where innovation meets education, and
-                    excellence becomes a habit.
-                </p>
+              
                 <!-- Video Carousel Section -->
                 <div id="video-tour" class="flex justify-center mb-8">
-                    <div
-                        class="flex w-full items-center justify-around space-x-4"
-                    >
+                    <div class="flex w-full max-w-4xl items-center justify-center space-x-8">
                         <!-- Previous Button -->
                         <button
                             id="prev-btn"
-                            class="bg-black/70 hover:bg-black/90 text-white p-3 rounded-full shadow-lg transition-all duration-300 z-20"
+                            class="flex-shrink-0 bg-black/70 hover:bg-black/90 text-white p-3 rounded-full shadow-lg transition-all duration-300 z-20"
                             aria-label="Previous video"
                         >
                             <i class="fas fa-chevron-left text-lg"></i>
                         </button>
 
                         <!-- Video Container -->
-                        <div class="relative max-w-sm mx-auto">
+                        <div class="relative flex-1 max-w-sm mx-auto">
                             <div
-                                class="relative overflow-hidden rounded-lg shadow-lg max-w-[300px]"
+                                class="relative overflow-hidden rounded-lg shadow-lg max-w-[300px] mx-auto"
                                 style="aspect-ratio: 9/16;"
                             >
                                 <div
@@ -101,15 +94,6 @@ const testimonialData = [
                                     <div class="flex-shrink-0 w-full h-full">
                                         <VideoPlayer src="/video/promo.mp4" />
                                     </div>
-                                
-                                    <div class="flex-shrink-0 w-full h-full">
-                                        <VideoPlayer src="/video/ad.mp4" />
-                                    </div>
-                                    <div class="flex-shrink-0 w-full h-full">
-                                        <VideoPlayer src="/video/ad.mp4" />
-                                    </div>
-                                
-                                
                                 </div>
                             </div>
                         </div>
@@ -117,7 +101,7 @@ const testimonialData = [
                         <!-- Next Button -->
                         <button
                             id="next-btn"
-                            class="bg-black/70 hover:bg-black/90 text-white p-3 rounded-full shadow-lg transition-all duration-300 z-20"
+                            class="flex-shrink-0 bg-black/70 hover:bg-black/90 text-white p-3 rounded-full shadow-lg transition-all duration-300 z-20"
                             aria-label="Next video"
                         >
                             <i class="fas fa-chevron-right text-lg"></i>
@@ -150,7 +134,19 @@ const testimonialData = [
 
                 </a>
             </div> -->
+
+
+            <p
+            class="text-2xl md:text-3xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed"
+        >
+            Join a community where innovation meets education, and
+            excellence becomes a habit.
+        </p>
+
             </div>
+
+
+       
 
             <!-- Video Players Grid -->
 
@@ -161,7 +157,7 @@ const testimonialData = [
                     const nextBtn = document.getElementById("next-btn");
                     const dots = document.querySelectorAll(".carousel-dot");
                     let currentIndex = 0;
-                    const totalSlides = 3;
+                    const totalSlides = 1;
 
                     const updateCarousel = () => {
                         wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
@@ -283,10 +279,9 @@ const testimonialData = [
                         <div class="space-y-4">
                             <div class="flex items-start">
                                 <div
-                                    class="bg-primary/10 p-2 rounded-full mt-1 mr-4"
+                                    class="bg-primary/10 p-3 rounded-full mt-1 mr-4 w-15 h-12 flex items-center justify-center"
                                 >
-                                    <i class="fas fa-lightbulb text-primary"
-                                    ></i>
+                                    <i class="fas fa-lightbulb text-primary text-lg"></i>
                                 </div>
                                 <div>
                                     <h5 class="font-medium text-gray-800">
@@ -302,9 +297,9 @@ const testimonialData = [
 
                             <div class="flex items-start">
                                 <div
-                                    class="bg-accent/10 p-2 rounded-full mt-1 mr-4"
+                                    class="bg-accent/10 p-3 rounded-full mt-1 mr-4 w-15 h-12 flex items-center justify-center"
                                 >
-                                    <i class="fas fa-users text-accent"></i>
+                                    <i class="fas fa-users text-accent text-lg"></i>
                                 </div>
                                 <div>
                                     <h5 class="font-medium text-gray-800">
@@ -320,9 +315,9 @@ const testimonialData = [
 
                             <div class="flex items-start">
                                 <div
-                                    class="bg-primary/10 p-2 rounded-full mt-1 mr-4"
+                                    class="bg-primary/10 p-3 rounded-full mt-1 mr-4 w-15 h-12 flex items-center justify-center"
                                 >
-                                    <i class="fas fa-brain text-primary"></i>
+                                    <i class="fas fa-brain text-primary text-lg"></i>
                                 </div>
                                 <div>
                                     <h5 class="font-medium text-gray-800">
@@ -556,7 +551,7 @@ const testimonialData = [
                             </div>
                         </div>
                         <div
-                            class="bg-gradient-to-r from-primary to-secondary text-white rounded-lg overflow-hidden hover:shadow-lg transition duration-300"
+                            class="bg-gradient-to-r from-primary to-secondary text-white rounded-lg overflow-hidden hover:shadow-lg transition duration-300 order-last md:order-none"
                         >
                             <div
                                 class="p-6 flex flex-col h-full justify-center items-center text-center"
