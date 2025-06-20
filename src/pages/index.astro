@@ -1,90 +1,154 @@
 ---
-import VideoPlayer from '../components/VideoPlayer.astro';
+import { Image } from 'astro:assets';
+import TestimonialCarousel from '../components/TestimonialCarousel.astro';
+
+import sectionBg from '../assets/images/section_background.png';
+import adnan from '../assets/images/adnan.png';
+import devi from '../assets/images/devi.png';
+import athulya from '../assets/images/athulya.png';
+
+import VideoPlayer from "../components/VideoPlayer.astro";
 import BaseLayout from "../layouts/baselayout.astro";
 
-
+const testimonialData = [
+    {
+        id: 1,
+        name: "Adnan Abdulla",
+        role: "Grade 10 Student",
+        description: "Shares his experience with CURE program",
+        videoUrl: "https://www.youtube.com/shorts/DPdonfoM9Ic",
+        videoType: "youtube" as const,
+        quote: "Adishesha has completely changed the way I approach learning. The personalized attention and innovative teaching methods have helped me excel in my studies."
+    },
+    {
+        id: 2,
+        name: "Athulya",
+        role: "Grade 12 Student", 
+        description: "Discusses her success with BRAINY program",
+        videoUrl: "https://www.youtube.com/shorts/DPdonfoM9Ic",
+        videoType: "youtube" as const,
+        quote: "The faculty at Adishesha are truly passionate about teaching. They go above and beyond to ensure every student succeeds."
+    },
+    {
+        id: 3,
+        name: "Devika",
+        role: "Undergraduate Student",
+        description: "Talks about RIOT course effectiveness", 
+        videoUrl: "https://www.youtube.com/shorts/DPdonfoM9Ic",
+        videoType: "youtube" as const,
+        quote: "Adishesha's programs are tailored to meet individual needs. I feel more confident and prepared for my future."
+    }
+];
 ---
 
 <BaseLayout>
 
-
-<!-- Hero Section with Background Image and Full Viewport Height -->
-<section class="relative min-h-screen flex flex-col justify-between bg-gradient-to-r from-primary to-secondary text-white pb-16">
-    <!-- Background Image with Overlay -->
-    <div class="absolute inset-0 z-0">
-        <img src="https://images.unsplash.com/photo-1495995424756-6a5a3f9e7543?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Education Background" class="w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-r from-primary/95 to-secondary/95"></div>
-    </div>
-    
-    <!-- Hero Content -->
-    <div class="container mx-auto max-w-7xl px-4 relative z-10 pt-4">
-        <div class="text-center max-w-6xl mx-auto mb-2">
-            <div class="inline-block bg-white/10 backdrop-blur-sm px-6 py-2 rounded-full mt-10 mb-2">
-                <span class="text-white/90 font-medium">Transforming Education Since 2020</span>
+    <!-- Hero Section with Background Image and Full Viewport Height -->
+    <section
+        class="relative min-h-screen flex flex-col justify-between bg-gradient-to-r from-primary to-secondary text-white pb-16"
+    >
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img
+                src="https://images.unsplash.com/photo-1495995424756-6a5a3f9e7543?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Education Background"
+                class="w-full h-full object-cover"
+            />
+            <div
+                class="absolute inset-0 bg-gradient-to-r from-primary/95 to-secondary/95"
+            >
             </div>
-            <h1 class="text-5xl md:text-6xl lg:text-8xl font-bold mb-6 leading-tight">
-                Your Journey to Sucess<br>
-                <span class="text-accent bg-accent bg-clip-text text-transparent">
-                    Begins Here
-                </span>
-            </h1>
-            <p class="text-2xl md:text-3xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Join a community where innovation meets education, and excellence becomes a habit.
-            </p>
-            <!-- Video Carousel Section -->
-            <div id="video-tour" class="flex justify-center mb-8">
-              <div class="flex w-full items-center justify-around space-x-4">
-                <!-- Previous Button -->
-                <button 
-                  id="prev-btn" 
-                  class="bg-black/70 hover:bg-black/90 text-white p-3 rounded-full shadow-lg transition-all duration-300 z-20"
-                  aria-label="Previous video"
+        </div>
+
+        <!-- Hero Content -->
+        <div class="container mx-auto max-w-7xl px-4 relative z-10 pt-4">
+            <div class="text-center max-w-6xl mx-auto mb-2">
+                <div
+                    class="inline-block bg-white/10 backdrop-blur-sm px-6 py-2 rounded-full mt-10 mb-2"
                 >
-                  <i class="fas fa-chevron-left text-lg"></i>
-                </button>
-                
-                <!-- Video Container -->
-                <div class="relative max-w-sm mx-auto">
-                  <div class="relative overflow-hidden rounded-lg shadow-lg max-w-[300px]" style="aspect-ratio: 9/16;">
-                    <div class="flex transition-transform duration-500 ease-in-out h-full w-full" id="carousel-wrapper">
-                      <div class="flex-shrink-0 w-full h-full">
-                        <VideoPlayer src='/video/promo.mp4' />
-                      </div>
-                      <div class="flex-shrink-0 w-full h-full">
-                        <VideoPlayer src='/video/promo.mp4' />
-                      </div>
-                      <div class="flex-shrink-0 w-full h-full">
-                        <VideoPlayer src='/video/promo.mp4' />
-                      </div>
-                      <div class="flex-shrink-0 w-full h-full">
-                        <VideoPlayer src='/video/promo.mp4' />
-                      </div>
-                     
-                   
-                    </div>
-                  </div>
+                    <span class="text-white/90 font-medium"
+                        >Transforming Education Since 2020</span
+                    >
                 </div>
-                
-                <!-- Next Button -->
-                <button 
-                  id="next-btn" 
-                  class="bg-black/70 hover:bg-black/90 text-white p-3 rounded-full shadow-lg transition-all duration-300 z-20"
-                  aria-label="Next video"
+                <h1
+                    class="text-5xl md:text-6xl lg:text-8xl font-bold mb-6 leading-tight"
                 >
-                  <i class="fas fa-chevron-right text-lg"></i>
-                </button>
-              </div>
-            </div>
-            
-            <!-- Carousel Indicators -->
-            <div class="flex justify-center mb-8 space-x-2">
-              <button class="carousel-dot w-3 h-3 rounded-full bg-white/60 hover:bg-white transition-all duration-300" data-slide="0"></button>
-              <button class="carousel-dot w-3 h-3 rounded-full bg-white/60 hover:bg-white transition-all duration-300" data-slide="1"></button>
-              <button class="carousel-dot w-3 h-3 rounded-full bg-white/60 hover:bg-white transition-all duration-300" data-slide="2"></button>
-            </div>
+                    Your Journey to Sucess<br />
+                    <span
+                        class="text-accent bg-accent bg-clip-text text-transparent"
+                    >
+                        Begins Here
+                    </span>
+                </h1>
+                <p
+                    class="text-2xl md:text-3xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed"
+                >
+                    Join a community where innovation meets education, and
+                    excellence becomes a habit.
+                </p>
+                <!-- Video Carousel Section -->
+                <div id="video-tour" class="flex justify-center mb-8">
+                    <div
+                        class="flex w-full items-center justify-around space-x-4"
+                    >
+                        <!-- Previous Button -->
+                        <button
+                            id="prev-btn"
+                            class="bg-black/70 hover:bg-black/90 text-white p-3 rounded-full shadow-lg transition-all duration-300 z-20"
+                            aria-label="Previous video"
+                        >
+                            <i class="fas fa-chevron-left text-lg"></i>
+                        </button>
 
-         
-            <!-- <div class="flex flex-wrap gap-6 justify-center items-center mb-16">
+                        <!-- Video Container -->
+                        <div class="relative max-w-sm mx-auto">
+                            <div
+                                class="relative overflow-hidden rounded-lg shadow-lg max-w-[300px]"
+                                style="aspect-ratio: 9/16;"
+                            >
+                                <div
+                                    class="flex transition-transform duration-500 ease-in-out h-full w-full"
+                                    id="carousel-wrapper"
+                                >
+                                    <div class="flex-shrink-0 w-full h-full">
+                                        <VideoPlayer src="/video/promo.mp4" />
+                                    </div>
+                                    <div class="flex-shrink-0 w-full h-full">
+                                        <VideoPlayer src="/video/ad.mp4" />
+                                    </div>
+                                    <div class="flex-shrink-0 w-full h-full">
+                                        <VideoPlayer src="/video/ad.mp4" />
+                                    </div>
+                                
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Next Button -->
+                        <button
+                            id="next-btn"
+                            class="bg-black/70 hover:bg-black/90 text-white p-3 rounded-full shadow-lg transition-all duration-300 z-20"
+                            aria-label="Next video"
+                        >
+                            <i class="fas fa-chevron-right text-lg"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Carousel Indicators -->
+                <div class="flex justify-center mb-8 space-x-2">
+                    <button
+                        class="carousel-dot w-3 h-3 rounded-full bg-white/60 hover:bg-white transition-all duration-300"
+                        data-slide="0"></button>
+                    <button
+                        class="carousel-dot w-3 h-3 rounded-full bg-white/60 hover:bg-white transition-all duration-300"
+                        data-slide="1"></button>
+                    <button
+                        class="carousel-dot w-3 h-3 rounded-full bg-white/60 hover:bg-white transition-all duration-300"
+                        data-slide="2"></button>
+                </div>
+
+                <!-- <div class="flex flex-wrap gap-6 justify-center items-center mb-16">
                 <a href="contact.php" class="inline-flex items-center bg-accent text-white font-medium py-4 px-10 rounded-lg shadow-lg hover:bg-accent/90 hover:shadow-glow-accent transition duration-300 text-lg">
                     Begin Your Journey
                     <i class="fas fa-arrow-right ml-2"></i>
@@ -96,225 +160,323 @@ import BaseLayout from "../layouts/baselayout.astro";
 
                 </a>
             </div> -->
+            </div>
+
+            <!-- Video Players Grid -->
+
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    const wrapper = document.getElementById("carousel-wrapper");
+                    const prevBtn = document.getElementById("prev-btn");
+                    const nextBtn = document.getElementById("next-btn");
+                    const dots = document.querySelectorAll(".carousel-dot");
+                    let currentIndex = 0;
+                    const totalSlides = 3;
+
+                    const updateCarousel = () => {
+                        wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+                        // Update dots
+                        dots.forEach((dot, index) => {
+                            if (index === currentIndex) {
+                                dot.classList.add("bg-white");
+                                dot.classList.remove("bg-white/60");
+                            } else {
+                                dot.classList.add("bg-white/60");
+                                dot.classList.remove("bg-white");
+                            }
+                        });
+                    };
+
+                    prevBtn.addEventListener("click", () => {
+                        currentIndex =
+                            currentIndex > 0
+                                ? currentIndex - 1
+                                : totalSlides - 1;
+                        updateCarousel();
+                    });
+
+                    nextBtn.addEventListener("click", () => {
+                        currentIndex =
+                            currentIndex < totalSlides - 1
+                                ? currentIndex + 1
+                                : 0;
+                        updateCarousel();
+                    });
+
+                    // Dot navigation
+                    dots.forEach((dot, index) => {
+                        dot.addEventListener("click", () => {
+                            currentIndex = index;
+                            updateCarousel();
+                        });
+                    });
+
+                    // Initialize
+                    updateCarousel();
+                });
+            </script>
         </div>
 
-        <!-- Video Players Grid -->
-      
-
-        <script>
-          document.addEventListener('DOMContentLoaded', () => {
-            const wrapper = document.getElementById('carousel-wrapper');
-            const prevBtn = document.getElementById('prev-btn');
-            const nextBtn = document.getElementById('next-btn');
-            const dots = document.querySelectorAll('.carousel-dot');
-            let currentIndex = 0;
-            const totalSlides = 3;
-
-            const updateCarousel = () => {
-              wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
-              
-              // Update dots
-              dots.forEach((dot, index) => {
-                if (index === currentIndex) {
-                  dot.classList.add('bg-white');
-                  dot.classList.remove('bg-white/60');
-                } else {
-                  dot.classList.add('bg-white/60');
-                  dot.classList.remove('bg-white');
-                }
-              });
-            };
-
-            prevBtn.addEventListener('click', () => {
-              currentIndex = currentIndex > 0 ? currentIndex - 1 : totalSlides - 1;
-              updateCarousel();
-            });
-
-            nextBtn.addEventListener('click', () => {
-              currentIndex = currentIndex < totalSlides - 1 ? currentIndex + 1 : 0;
-              updateCarousel();
-            });
-
-            // Dot navigation
-            dots.forEach((dot, index) => {
-              dot.addEventListener('click', () => {
-                currentIndex = index;
-                updateCarousel();
-              });
-            });
-
-            // Initialize
-            updateCarousel();
-          });
-        </script>
-    </div>
-    
-    <!-- Statistics Bar -->
-    <div class="relative z-10 mt-16 border border-white/20">
-        <div class="container mx-auto max-w-7xl px-4 py-8">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                <div>
-                    <div class="text-4xl font-bold text-accent mb-2">1000+</div>
-                    <div class="text-white/80">Students Enrolled</div>
-                </div>
-                <div>
-                    <div class="text-4xl font-bold text-accent mb-2">95%</div>
-                    <div class="text-white/80">Success Rate</div>
-                </div>
-                <div>
-                    <div class="text-4xl font-bold text-accent mb-2">50+</div>
-                    <div class="text-white/80">Expert Faculty</div>
-                </div>
-                <div>
-                    <div class="text-4xl font-bold text-accent mb-2">20+</div>
-                    <div class="text-white/80">Programs</div>
+        <!-- Statistics Bar -->
+        <div class="relative z-10 mt-16 border border-white/20">
+            <div class="container mx-auto max-w-7xl px-4 py-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div>
+                        <div class="text-4xl font-bold text-accent mb-2">
+                            1000+
+                        </div>
+                        <div class="text-white/80">Students Enrolled</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-accent mb-2">
+                            95%
+                        </div>
+                        <div class="text-white/80">Success Rate</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-accent mb-2">
+                            50+
+                        </div>
+                        <div class="text-white/80">Expert Faculty</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-accent mb-2">
+                            20+
+                        </div>
+                        <div class="text-white/80">Programs</div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-            
-<!-- About Us Section - Card-Based Layout -->
-<section id="learn-more" class="py-16 px-4 bg-white">
-    <div class="container mx-auto max-w-6xl">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-gray-800 mb-3">Who We Are</h2>
+    </section>
+
+    <!-- About Us Section - Card-Based Layout -->
+    <section id="learn-more" class="py-16 px-4 bg-white">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-3">
+                    Who We Are
+                </h2>
+                <div class="h-1 w-24 bg-primary mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Dedicated to fostering a love for learning and enabling
+                    individuals to reach their full potential.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+                <!-- Image Card with Educational Philosophy -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                    <div class="relative">
+                        <Image src={sectionBg} alt="Background" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end"
+                        >
+                            <div class="p-6 text-white w-full">
+                                <h3 class="text-2xl font-bold mb-2">
+                                    Adishesha Institute
+                                </h3>
+                                <p class="text-white/80 mb-4">
+                                    Education & Research Center
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Below the Image -->
+                    <div class="p-6 bg-gray-50 border-t border-gray-100">
+                        <h4 class="text-lg font-semibold text-primary mb-4">
+                            Our Educational Philosophy
+                        </h4>
+
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div
+                                    class="bg-primary/10 p-2 rounded-full mt-1 mr-4"
+                                >
+                                    <i class="fas fa-lightbulb text-primary"
+                                    ></i>
+                                </div>
+                                <div>
+                                    <h5 class="font-medium text-gray-800">
+                                        Experiential Learning
+                                    </h5>
+                                    <p class="text-sm text-gray-600">
+                                        We believe in learning by doing, where
+                                        students engage actively with concepts
+                                        through practical applications.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div
+                                    class="bg-accent/10 p-2 rounded-full mt-1 mr-4"
+                                >
+                                    <i class="fas fa-users text-accent"></i>
+                                </div>
+                                <div>
+                                    <h5 class="font-medium text-gray-800">
+                                        Collaborative Environment
+                                    </h5>
+                                    <p class="text-sm text-gray-600">
+                                        Our institutes foster teamwork and peer
+                                        learning, preparing students for
+                                        real-world collaborative settings.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div
+                                    class="bg-primary/10 p-2 rounded-full mt-1 mr-4"
+                                >
+                                    <i class="fas fa-brain text-primary"></i>
+                                </div>
+                                <div>
+                                    <h5 class="font-medium text-gray-800">
+                                        Critical Thinking Focus
+                                    </h5>
+                                    <p class="text-sm text-gray-600">
+                                        We encourage questioning, analysis, and
+                                        independent thought rather than rote
+                                        memorization.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Key Statistics in Horizontal Layout -->
+                        <div
+                            class="mt-6 pt-6 border-t border-gray-200 grid grid-cols-2 lg:grid-cols-4 gap-4"
+                        >
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-primary">
+                                    1000+
+                                </div>
+                                <div class="text-sm text-gray-500">
+                                    Students Mentored
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-accent">
+                                    50+
+                                </div>
+                                <div class="text-sm text-gray-500">
+                                    Expert Educators
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-primary">
+                                    95%
+                                </div>
+                                <div class="text-sm text-gray-500">
+                                    Success Rate
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-accent">
+                                    20+
+                                </div>
+                                <div class="text-sm text-gray-500">
+                                    Programs Offered
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mission & Vision Card -->
+                <div class="grid grid-cols-1 gap-8">
+                    <!-- About Card -->
+                    <div
+                        class="bg-gray-50 p-8 rounded-lg shadow-md border-l-4 border-primary"
+                    >
+                        <div class="flex items-start mb-4">
+                            <div class="bg-primary/10 p-3 rounded-full mr-4">
+                                <i
+                                    class="fa-solid fa-graduation-cap text-2xl text-primary"
+                                ></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold text-gray-800">
+                                Our Approach
+                            </h3>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed">
+                            Welcome to Adishesha Institute, where we believe in
+                            igniting the spark of inspiration in every learner!
+                            Our passion for education and commitment to
+                            excellence drive us to create a dynamic and
+                            empowering learning environment for students from
+                            SSLC and beyond.
+                        </p>
+                    </div>
+
+                    <!-- Vision Card -->
+                    <div
+                        class="bg-gray-50 p-8 rounded-lg shadow-md border-l-4 border-accent"
+                    >
+                        <div class="flex items-start mb-4">
+                            <div class="bg-accent/10 p-3 rounded-full mr-4">
+                                <i class="fa-solid fa-eye text-2xl text-accent"
+                                ></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold text-gray-800">
+                                Our Vision
+                            </h3>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed">
+                            Our vision is to make education engaging,
+                            accessible, and transformative. We aim to unlock the
+                            inherent curiosity and creativity within each
+                            learner, empowering them to become confident,
+                            critical thinkers and lifelong learners.
+                        </p>
+                    </div>
+
+                    <!-- Mission Card -->
+                    <div
+                        class="bg-gray-50 p-8 rounded-lg shadow-md border-l-4 border-primary"
+                    >
+                        <div class="flex items-start mb-4">
+                            <div class="bg-primary/10 p-3 rounded-full mr-4">
+                                <i
+                                    class="fa-solid fa-bullseye text-2xl text-primary"
+                                ></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold text-gray-800">
+                                Our Mission
+                            </h3>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed">
+                            Our mission is to provide exceptional educational
+                            experiences that equip students with the knowledge,
+                            skills, and character necessary to succeed in an
+                            ever-evolving world. We strive to make a positive
+                            impact on learners' lives.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="py-16 px-4 bg-white">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4 text-center">
+                Our Programs
+            </h2>
             <div class="h-1 w-24 bg-primary mx-auto mb-6"></div>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                Dedicated to fostering a love for learning and enabling individuals to reach their full potential.
+
+            <p class="text-gray-600 mb-8 text-center max-w-4xl mx-auto">
+                Adishesha offers a comprehensive range of programs designed to
+                support students at every stage of their learning journey, from
+                early education to advanced academic support.
             </p>
-        </div>
-        
-        <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
-            <!-- Image Card with Educational Philosophy -->
-            <div class="bg-white rounded-lg overflow-hidden shadow-lg">
-                <div class="relative">
-                    <img src="public/images/section_background.png" alt="Adishesha Institute" class="w-full h-80 object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-                        <div class="p-6 text-white w-full">
-                            <h3 class="text-2xl font-bold mb-2">Adishesha Institute</h3>
-                            <p class="text-white/80 mb-4">Education & Research Center</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Content Below the Image -->
-                <div class="p-6 bg-gray-50 border-t border-gray-100">
-                    <h4 class="text-lg font-semibold text-primary mb-4">Our Educational Philosophy</h4>
-                    
-                    <div class="space-y-4">
-                        <div class="flex items-start">
-                            <div class="bg-primary/10 p-2 rounded-full mt-1 mr-4">
-                                <i class="fas fa-lightbulb text-primary"></i>
-                            </div>
-                            <div>
-                                <h5 class="font-medium text-gray-800">Experiential Learning</h5>
-                                <p class="text-sm text-gray-600">We believe in learning by doing, where students engage actively with concepts through practical applications.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="bg-accent/10 p-2 rounded-full mt-1 mr-4">
-                                <i class="fas fa-users text-accent"></i>
-                            </div>
-                            <div>
-                                <h5 class="font-medium text-gray-800">Collaborative Environment</h5>
-                                <p class="text-sm text-gray-600">Our institutes foster teamwork and peer learning, preparing students for real-world collaborative settings.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="bg-primary/10 p-2 rounded-full mt-1 mr-4">
-                                <i class="fas fa-brain text-primary"></i>
-                            </div>
-                            <div>
-                                <h5 class="font-medium text-gray-800">Critical Thinking Focus</h5>
-                                <p class="text-sm text-gray-600">We encourage questioning, analysis, and independent thought rather than rote memorization.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Key Statistics in Horizontal Layout -->
-                    <div class="mt-6 pt-6 border-t border-gray-200 grid grid-cols-2 lg:grid-cols-4 gap-4">
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-primary">1000+</div>
-                            <div class="text-sm text-gray-500">Students Mentored</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-accent">50+</div>
-                            <div class="text-sm text-gray-500">Expert Educators</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-primary">95%</div>
-                            <div class="text-sm text-gray-500">Success Rate</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-accent">20+</div>
-                            <div class="text-sm text-gray-500">Programs Offered</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Mission & Vision Card -->
-            <div class="grid grid-cols-1 gap-8">
-                <!-- About Card -->
-                <div class="bg-gray-50 p-8 rounded-lg shadow-md border-l-4 border-primary">
-                    <div class="flex items-start mb-4">
-                        <div class="bg-primary/10 p-3 rounded-full mr-4">
-                            <i class="fa-solid fa-graduation-cap text-2xl text-primary"></i>
-                        </div>
-                        <h3 class="text-2xl font-semibold text-gray-800">Our Approach</h3>
-                    </div>
-                    <p class="text-gray-600 leading-relaxed">
-                        Welcome to Adishesha Institute, where we believe in igniting the spark of inspiration in every learner! Our passion for education and commitment to excellence drive us to create a dynamic and empowering learning environment for students from SSLC and beyond.
-                    </p>
-                </div>
-                
-                <!-- Vision Card -->
-                <div class="bg-gray-50 p-8 rounded-lg shadow-md border-l-4 border-accent">
-                    <div class="flex items-start mb-4">
-                        <div class="bg-accent/10 p-3 rounded-full mr-4">
-                            <i class="fa-solid fa-eye text-2xl text-accent"></i>
-                        </div>
-                        <h3 class="text-2xl font-semibold text-gray-800">Our Vision</h3>
-                    </div>
-                    <p class="text-gray-600 leading-relaxed">
-                        Our vision is to make education engaging, accessible, and transformative. We aim to unlock the inherent curiosity and creativity within each learner, empowering them to become confident, critical thinkers and lifelong learners.
-                    </p>
-                </div>
-                
-                <!-- Mission Card -->
-                <div class="bg-gray-50 p-8 rounded-lg shadow-md border-l-4 border-primary">
-                    <div class="flex items-start mb-4">
-                        <div class="bg-primary/10 p-3 rounded-full mr-4">
-                            <i class="fa-solid fa-bullseye text-2xl text-primary"></i>
-                        </div>
-                        <h3 class="text-2xl font-semibold text-gray-800">Our Mission</h3>
-                    </div>
-                    <p class="text-gray-600 leading-relaxed">
-                        Our mission is to provide exceptional educational experiences that equip students with the knowledge, skills, and character necessary to succeed in an ever-evolving world. We strive to make a positive impact on learners' lives.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
-
-<!-- Programs Section -->
-<section class="py-16 px-4 bg-white">
-    <div class="container mx-auto max-w-6xl">
-        <h2 class="text-3xl font-bold text-gray-800 mb-4 text-center">
-            Our Programs
-        </h2>
-        <div class="h-1 w-24 bg-primary mx-auto mb-6"></div>
-        
-        <p class="text-gray-600 mb-8 text-center max-w-4xl mx-auto">
-            Adishesha offers a comprehensive range of programs designed to support students at every stage of their learning journey, from early education to advanced academic support.
-        </p>
-        
-        <!-- Program Tabs
+            <!-- Program Tabs
 <div class="mb-12">
     <div class="flex flex-wrap justify-center gap-2 md:gap-4 mb-8">
         <button class="tab-button active px-4 py-2 rounded-full bg-primary text-white" data-tab="school">School Programs</button>
@@ -323,265 +485,323 @@ import BaseLayout from "../layouts/baselayout.astro";
         <button class="tab-button px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300 text-gray-700" data-tab="skill">Skill Development</button>
     </div> -->
 
-    <!-- Tab Content -->
-    <div class="tab-content">
-        <div class="tab-pane active" id="school">
-            <div class="grid md:grid-cols-3 gap-8 mt-12">
-                <!-- Program 1 -->
-                <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition duration-300">
-                    <div class="bg-primary h-2"></div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-3">CURE (SSLC)</h3>
-                        <p class="text-gray-600">
-                            Builds strong basics through real-life connected learning, ensuring full understanding and long-term clarity for SSLC students.
-                        </p>
+            <!-- Tab Content -->
+            <div class="tab-content">
+                <div class="tab-pane active" id="school">
+                    <div class="grid md:grid-cols-3 gap-8 mt-12">
+                        <!-- Program 1 -->
+                        <div
+                            class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition duration-300"
+                        >
+                            <div class="bg-primary h-2"></div>
+                            <div class="p-6">
+                                <h3
+                                    class="text-xl font-semibold text-gray-800 mb-3"
+                                >
+                                    CURE (SSLC)
+                                </h3>
+                                <p class="text-gray-600">
+                                    Builds strong basics through real-life
+                                    connected learning, ensuring full
+                                    understanding and long-term clarity for SSLC
+                                    students.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Program 2 -->
+                        <div
+                            class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition duration-300"
+                        >
+                            <div class="bg-accent h-2"></div>
+                            <div class="p-6">
+                                <h3
+                                    class="text-xl font-semibold text-gray-800 mb-3"
+                                >
+                                    BRAINY (+1, +2, VHSE)
+                                </h3>
+                                <p class="text-gray-600">
+                                    Offers smart resources and mentoring to
+                                    sharpen thinking, boost scores, and support
+                                    youth through higher secondary.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Program 3 -->
+                        <div
+                            class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition duration-300"
+                        >
+                            <div class="bg-primary h-2"></div>
+                            <div class="p-6">
+                                <h3
+                                    class="text-xl font-semibold text-gray-800 mb-3"
+                                >
+                                    RIOT COURSE (Diploma–PhD)
+                                </h3>
+                                <p class="text-gray-600">
+                                    Trains students to think clearly and improve
+                                    fast with structured learning for academic
+                                    and life success.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Program 4 -->
+                        <div
+                            class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition duration-300"
+                        >
+                            <div class="bg-accent h-2"></div>
+                            <div class="p-6">
+                                <h3
+                                    class="text-xl font-semibold text-gray-800 mb-3"
+                                >
+                                    ACE COURSE (PSC/UPSC/SSC etc.)
+                                </h3>
+                                <p class="text-gray-600">
+                                    Focused exam coaching with clear strategies
+                                    to crack job-oriented competitive exams
+                                    confidently.
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-gradient-to-r from-primary to-secondary text-white rounded-lg overflow-hidden hover:shadow-lg transition duration-300"
+                        >
+                            <div
+                                class="p-6 flex flex-col h-full justify-center items-center text-center"
+                            >
+                                <h3 class="text-xl font-semibold mb-3">
+                                    Ready to Join?
+                                </h3>
+                                <p class="mb-6">
+                                    Discover the perfect program for your
+                                    educational journey.
+                                </p>
+                                <a
+                                    href="/programs"
+                                    class="inline-block bg-accent text-white font-medium py-2 px-6 rounded-lg hover:bg-accent/90 transition duration-300"
+                                >
+                                    View All Programs
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Program 5 -->
+                        <div
+                            class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition duration-300"
+                        >
+                            <div class="bg-primary h-2"></div>
+                            <div class="p-6">
+                                <h3
+                                    class="text-xl font-semibold text-gray-800 mb-3"
+                                >
+                                    ROOTS (Entrance Exams)
+                                </h3>
+                                <p class="text-gray-600">
+                                    Strengthens core concepts with targeted
+                                    support to crack major entrance exams like
+                                    NEET, JEE, GATE, CUET, etc.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- CTA Card -->
                     </div>
                 </div>
-                
-                <!-- Program 2 -->
-                <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition duration-300">
-                    <div class="bg-accent h-2"></div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-3">BRAINY (+1, +2, VHSE)</h3>
-                        <p class="text-gray-600">
-                           Offers smart resources and mentoring to sharpen thinking, boost scores, and support youth through higher secondary.
-                        </p>
-                    </div>
+                <div class="tab-pane hidden" id="entrance">
+                    <p>Content for Entrance Exams.</p>
                 </div>
-                
-                <!-- Program 3 -->
-                <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition duration-300">
-                    <div class="bg-primary h-2"></div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-3">RIOT COURSE (Diploma–PhD)</h3>
-                        <p class="text-gray-600">
-                            Trains students to think clearly and improve fast with structured learning for academic and life success.
-                        </p>
-                    </div>
+                <div class="tab-pane hidden" id="civil">
+                    <p>Content for Civil Services.</p>
                 </div>
-                
-                <!-- Program 4 -->
-                <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition duration-300">
-                    <div class="bg-accent h-2"></div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-3">ACE COURSE (PSC/UPSC/SSC etc.)</h3>
-                        <p class="text-gray-600">
-                            Focused exam coaching with clear strategies to crack job-oriented competitive exams confidently.
-                        </p>
-                    </div>
+                <div class="tab-pane hidden" id="skill">
+                    <p>Content for Skill Development.</p>
                 </div>
-                <div class="bg-gradient-to-r from-primary to-secondary text-white rounded-lg overflow-hidden hover:shadow-lg transition duration-300">
-                    <div class="p-6 flex flex-col h-full justify-center items-center text-center">
-                        <h3 class="text-xl font-semibold mb-3">Ready to Join?</h3>
-                        <p class="mb-6">Discover the perfect program for your educational journey.</p>
-                        <a href="/programs" class="inline-block bg-accent text-white font-medium py-2 px-6 rounded-lg hover:bg-accent/90 transition duration-300">
-                            View All Programs
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Program 5 -->
-                <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition duration-300">
-                    <div class="bg-primary h-2"></div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-3">ROOTS (Entrance Exams) </h3>
-                        <p class="text-gray-600">
-                            Strengthens core concepts with targeted support to crack major entrance exams like NEET, JEE, GATE, CUET, etc.
-                        </p>
-                    </div>
-                </div>
-                
-                <!-- CTA Card -->
-               
             </div>
         </div>
-        <div class="tab-pane hidden" id="entrance">
-            <p>Content for Entrance Exams.</p>
-        </div>
-        <div class="tab-pane hidden" id="civil">
-            <p>Content for Civil Services.</p>
-        </div>
-        <div class="tab-pane hidden" id="skill">
-            <p>Content for Skill Development.</p>
-        </div>
-    </div>
-</div>
 
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const buttons = document.querySelectorAll('.tab-button');
-        const panes = document.querySelectorAll('.tab-pane');
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const buttons = document.querySelectorAll(".tab-button");
+                const panes = document.querySelectorAll(".tab-pane");
 
-        buttons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Remove active class from all buttons
-                buttons.forEach(btn => btn.classList.remove('active', 'bg-primary', 'text-white'));
-                btn.classList.add('bg-gray-200', 'text-gray-700');
+                buttons.forEach((button) => {
+                    button.addEventListener("click", () => {
+                        // Remove active class from all buttons
+                        buttons.forEach((btn) =>
+                            btn.classList.remove(
+                                "active",
+                                "bg-primary",
+                                "text-white",
+                            ),
+                        );
+                        btn.classList.add("bg-gray-200", "text-gray-700");
 
-                // Add active class to the clicked button
-                button.classList.add('active', 'bg-primary', 'text-white');
-                button.classList.remove('bg-gray-200', 'text-gray-700');
+                        // Add active class to the clicked button
+                        button.classList.add(
+                            "active",
+                            "bg-primary",
+                            "text-white",
+                        );
+                        button.classList.remove("bg-gray-200", "text-gray-700");
 
-                // Hide all panes
-                panes.forEach(pane => pane.classList.add('hidden'));
-                pane.classList.remove('active');
+                        // Hide all panes
+                        panes.forEach((pane) => pane.classList.add("hidden"));
+                        pane.classList.remove("active");
 
-                // Show the corresponding pane
-                const targetPane = document.getElementById(button.dataset.tab);
-                targetPane.classList.remove('hidden');
-                targetPane.classList.add('active');
+                        // Show the corresponding pane
+                        const targetPane = document.getElementById(
+                            button.dataset.tab,
+                        );
+                        targetPane.classList.remove("hidden");
+                        targetPane.classList.add("active");
+                    });
+                });
             });
-        });
-    });
-</script>
-    
+        </script>
 
-<!-- Rest of the sections remain unchanged -->
-<!-- What Sets Us Apart Section -->
-<section class="py-16 px-4 bg-gray-50">
-    <div class="container mx-auto max-w-6xl">
-        <h2 class="text-3xl font-bold text-gray-800 mb-4 text-center">
-            What Sets Us Apart
-        </h2>
-        <div class="h-1 w-24 bg-primary mx-auto mb-6"></div>
-        
-        <p class="text-gray-600 mb-8 text-center max-w-4xl mx-auto">
-            At Adishesha, we take pride in our innovative approach to education. Here are some key factors that set us apart:
-        </p>
-        
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
-            <!-- Feature 1 -->
-            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
-                <div class="text-primary mb-4">
-                    <i class="fa-solid fa-user-graduate text-3xl"></i>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-800 mb-3">Personalized Learning</h3>
-                <p class="text-gray-600">
-                    We understand that each student is unique, as are their learning styles and preferences. Our personalized learning approach tailors the curriculum to meet individual needs.
-                </p>
-            </div>
-            
-            <!-- Feature 2 -->
-            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
-                <div class="text-accent mb-4">
-                    <i class="fa-solid fa-chalkboard-teacher text-3xl"></i>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-800 mb-3">Passionate Educators</h3>
-                <p class="text-gray-600">
-                    Our dedicated team members are not just teachers; they are mentors and guides passionate about nurturing young minds and fostering a love for learning.
-                </p>
-            </div>
-            
-            <!-- Feature 3 -->
-            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
-                <div class="text-primary mb-4">
-                    <i class="fa-solid fa-laptop-code text-3xl"></i>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-800 mb-3">Cutting-Edge Technology</h3>
-                <p class="text-gray-600">
-                    We leverage the latest educational technologies to enhance the learning experience, incorporating interactive elements that make learning fun and engaging.
-                </p>
-            </div>
-            
-            <!-- Feature 4 -->
-            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
-                <div class="text-accent mb-4">
-                    <i class="fa-solid fa-brain text-3xl"></i>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-800 mb-3">Holistic Development</h3>
-                <p class="text-gray-600">
-                    Beyond academics, we focus on the overall development of our students, nurturing creativity, critical thinking, and character building.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
+        <!-- Rest of the sections remain unchanged -->
+        <!-- What Sets Us Apart Section -->
+        <section class="py-16 px-4 bg-gray-50">
+            <div class="container mx-auto max-w-6xl">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4 text-center">
+                    What Sets Us Apart
+                </h2>
+                <div class="h-1 w-24 bg-primary mx-auto mb-6"></div>
 
-<!-- Testimonials Section -->
-<section class="py-16 px-4 bg-white">
-    <div class="container mx-auto max-w-6xl">
-        <h2 class="text-3xl font-bold text-gray-800 mb-4 text-center">
-            What Our Students Say
-        </h2>
-        <div class="h-1 w-24 bg-primary mx-auto mb-6"></div>
-        
-        <p class="text-gray-600 mb-8 text-center max-w-4xl mx-auto">
-            Hear from our students about their experiences and how Adishesha has transformed their learning journey.
-        </p>
-        
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-            <!-- Testimonial 1 -->
-            <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300">
-                <p class="text-gray-600 italic mb-4">
-                    "Adishesha has completely changed the way I approach learning. The personalized attention and innovative teaching methods have helped me excel in my studies."
+                <p class="text-gray-600 mb-8 text-center max-w-4xl mx-auto">
+                    At Adishesha, we take pride in our innovative approach to
+                    education. Here are some key factors that set us apart:
                 </p>
-                <div class="flex items-center">
-                    <img src="/images/adnan.png" alt="Adnan" class="w-12 h-12 rounded-full mr-4">
-                    <div>
-                        <h4 class="text-lg font-semibold text-gray-800">Adnan</h4>
-                        <p class="text-sm text-gray-500">Grade 10 Student</p>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+                    <!-- Feature 1 -->
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300"
+                    >
+                        <div class="text-primary mb-4">
+                            <i class="fa-solid fa-user-graduate text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">
+                            Personalized Learning
+                        </h3>
+                        <p class="text-gray-600">
+                            We understand that each student is unique, as are
+                            their learning styles and preferences. Our
+                            personalized learning approach tailors the
+                            curriculum to meet individual needs.
+                        </p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300"
+                    >
+                        <div class="text-accent mb-4">
+                            <i class="fa-solid fa-chalkboard-teacher text-3xl"
+                            ></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">
+                            Passionate Educators
+                        </h3>
+                        <p class="text-gray-600">
+                            Our dedicated team members are not just teachers;
+                            they are mentors and guides passionate about
+                            nurturing young minds and fostering a love for
+                            learning.
+                        </p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300"
+                    >
+                        <div class="text-primary mb-4">
+                            <i class="fa-solid fa-laptop-code text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">
+                            Cutting-Edge Technology
+                        </h3>
+                        <p class="text-gray-600">
+                            We leverage the latest educational technologies to
+                            enhance the learning experience, incorporating
+                            interactive elements that make learning fun and
+                            engaging.
+                        </p>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300"
+                    >
+                        <div class="text-accent mb-4">
+                            <i class="fa-solid fa-brain text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">
+                            Holistic Development
+                        </h3>
+                        <p class="text-gray-600">
+                            Beyond academics, we focus on the overall
+                            development of our students, nurturing creativity,
+                            critical thinking, and character building.
+                        </p>
                     </div>
                 </div>
             </div>
-            
-            <!-- Testimonial 2 -->
-            <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300">
-                <p class="text-gray-600 italic mb-4">
-                    "The faculty at Adishesha are truly passionate about teaching. They go above and beyond to ensure every student succeeds."
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="py-16 px-4 bg-white">
+            <div class="container mx-auto max-w-6xl">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4 text-center">
+                    What Our Students Say
+                </h2>
+                <div class="h-1 w-24 bg-primary mx-auto mb-6"></div>
+
+                <p class="text-gray-600 mb-8 text-center max-w-4xl mx-auto">
+                    Hear from our students about their experiences and how
+                    Adishesha has transformed their learning journey.
                 </p>
-                <div class="flex items-center">
-                    <img src="/images/athulya.png" alt="Athulya" class="w-12 h-12 rounded-full mr-4">
-                    <div>
-                        <h4 class="text-lg font-semibold text-gray-800">Athulya</h4>
-                        <p class="text-sm text-gray-500">Grade 12 Student</p>
-                    </div>
-                </div>
+
+                <!-- Video Testimonial Carousel Component -->
+                <TestimonialCarousel testimonials={testimonialData} showText={false} />
             </div>
-            
-            <!-- Testimonial 3 -->
-            <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300">
-                <p class="text-gray-600 italic mb-4">
-                    "Adishesha's programs are tailored to meet individual needs. I feel more confident and prepared for my future."
+        </section>
+
+        <!-- Join Our Community Section -->
+        <section class="py-16 px-4 bg-gray-50">
+            <div class="container mx-auto max-w-4xl text-center">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">
+                    Join our Community
+                </h2>
+                <div class="h-1 w-24 bg-primary mx-auto mb-6"></div>
+
+                <p class="text-gray-600 mb-10 leading-relaxed">
+                    We invite you to join the Adishesha community and embark on
+                    an educational journey like no other. Together, let's
+                    cultivate a love for learning, embrace curiosity, and
+                    inspire tomorrow's leaders.
+                    <br /><br />
+                    At Adishesha, we believe that education is not just about acquiring
+                    knowledge; it's about transforming lives. Join us in shaping
+                    a brighter future, one learner at a time.
                 </p>
-                <div class="flex items-center">
-                    <img src="/images/devika.png" alt="Devika" class="w-12 h-12 rounded-full mr-4">
-                    <div>
-                        <h4 class="text-lg font-semibold text-gray-800">Devika</h4>
-                        <p class="text-sm text-gray-500">Undergraduate Student</p>
-                    </div>
-                </div>
+
+                <h3 class="text-2xl font-bold text-primary mb-8">
+                    <span class="text-accent">Inspire.</span> Learn. <span
+                        class="text-accent">Succeed.</span
+                    >
+                </h3>
+
+                <a
+                    href="https://wa.me/918301933420?text=Hello! I'm interested in learning more about Adishesha Institute programs and would like to get in touch."
+                    target="_blank"
+                    class="inline-block bg-primary hover:bg-primary/90 text-white font-medium py-3 px-8 rounded-lg shadow-lg hover:shadow-glow transition duration-300"
+                >
+                    Contact Us Today
+                </a>
             </div>
-        </div>
-    </div>
-</section>
-
-
-<!-- Join Our Community Section -->
-<section class="py-16 px-4 bg-gray-50">
-    <div class="container mx-auto max-w-4xl text-center">
-        <h2 class="text-3xl font-bold text-gray-800 mb-4">
-            Join our Community
-        </h2>
-        <div class="h-1 w-24 bg-primary mx-auto mb-6"></div>
-        
-        <p class="text-gray-600 mb-10 leading-relaxed">
-            We invite you to join the Adishesha community and embark on an educational journey like no other. 
-            Together, let's cultivate a love for learning, embrace curiosity, and inspire tomorrow's leaders.
-            <br><br>
-            At Adishesha, we believe that education is not just about acquiring knowledge; it's about transforming lives. 
-            Join us in shaping a brighter future, one learner at a time.
-        </p>
-        
-        <h3 class="text-2xl font-bold text-primary mb-8">
-            <span class="text-accent">Inspire.</span> Learn. <span class="text-accent">Succeed.</span>
-        </h3>
-        
-        <a href="contact.php" class="inline-block bg-primary hover:bg-primary/90 text-white font-medium py-3 px-8 rounded-lg shadow-lg hover:shadow-glow transition duration-300">
-            Contact Us Today
-        </a>
-    </div>
-</section>
-
-
-
-</BaseLayout>
+        </section>
+    </section></BaseLayout
+>

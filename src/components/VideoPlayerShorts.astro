@@ -1,0 +1,30 @@
+---
+interface Props {
+  src: string;
+}
+
+const { src } = Astro.props;
+
+// Helper function to extract YouTube video ID from various URL formats including Shorts
+function getYouTubeVideoId(url: string): string {
+  const regex = /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/|youtube\.com\/shorts\/)([^"&?\/\s]{11})/;
+  const match = url.match(regex);
+  return match ? match[1] : '';
+}
+
+const videoId = getYouTubeVideoId(src);
+const embedUrl = `https://www.youtube.com/embed/${videoId}`;
+---
+
+<div class="video-player-shorts w-full h-full" style="aspect-ratio: 9/16;">
+  <iframe
+    width="100%"
+    height="100%"
+    src={embedUrl}
+    title="YouTube Shorts player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+    class="w-full h-full rounded-lg object-cover"
+  ></iframe>
+</div>
