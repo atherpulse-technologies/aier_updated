@@ -13,31 +13,21 @@ import BaseLayout from "../layouts/baselayout.astro";
 const testimonialData = [
     {
         id: 1,
-        name: "Adnan Abdulla",
-        role: "Grade 10 Student",
-        description: "Shares his experience with CURE program",
-        videoUrl: "https://www.youtube.com/shorts/DPdonfoM9Ic",
-        videoType: "youtube" as const,
-        quote: "Adishesha has completely changed the way I approach learning. The personalized attention and innovative teaching methods have helped me excel in my studies."
+        videoUrl: "https://www.youtube.com/shorts/DPdonfoM9Ic"
     },
     {
         id: 2,
-        name: "Athulya",
-        role: "Grade 12 Student", 
-        description: "Discusses her success with BRAINY program",
-        videoUrl: "https://www.youtube.com/shorts/DPdonfoM9Ic",
-        videoType: "youtube" as const,
-        quote: "The faculty at Adishesha are truly passionate about teaching. They go above and beyond to ensure every student succeeds."
+        videoUrl: "https://www.youtube.com/shorts/QiKdVIDQH40"
     },
     {
         id: 3,
-        name: "Devika",
-        role: "Undergraduate Student",
-        description: "Talks about RIOT course effectiveness", 
-        videoUrl: "https://www.youtube.com/shorts/DPdonfoM9Ic",
-        videoType: "youtube" as const,
-        quote: "Adishesha's programs are tailored to meet individual needs. I feel more confident and prepared for my future."
-    }
+        videoUrl: "https://www.youtube.com/shorts/ONnA77tiLhYc"
+    },
+    {
+        id: 4,
+        videoUrl: "https://www.youtube.com/shorts/cOKARJvhb4s"
+    },
+  
 ];
 ---
 
@@ -755,17 +745,16 @@ const testimonialData = [
         <section class="py-16 px-4 bg-white">
             <div class="container mx-auto max-w-6xl">
                 <h2 class="text-3xl font-bold text-gray-800 mb-4 text-center">
-                    What Our Students Say
+                    Student Success Stories
                 </h2>
                 <div class="h-1 w-24 bg-primary mx-auto mb-6"></div>
 
                 <p class="text-gray-600 mb-8 text-center max-w-4xl mx-auto">
-                    Hear from our students about their experiences and how
-                    Adishesha has transformed their learning journey.
+                    Watch our students share their success stories and transformation journeys.
                 </p>
 
                 <!-- Video Testimonial Carousel Component -->
-                <TestimonialCarousel testimonials={testimonialData} showText={false} />
+                <TestimonialCarousel testimonials={testimonialData} />
             </div>
         </section>
 

@@ -3,12 +3,7 @@ import VideoPlayerShorts from './VideoPlayerShorts.astro';
 
 export interface TestimonialData {
   id: number;
-  name: string;
-  role: string;
-  description: string;
   videoUrl: string;
-  videoType: 'youtube' | 'vimeo' | 'self-hosted' | 'external';
-  quote?: string;
 }
 
 interface Props {
