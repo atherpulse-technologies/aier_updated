@@ -3,9 +3,8 @@ import { Image } from 'astro:assets';
 import TestimonialCarousel from '../components/TestimonialCarousel.astro';
 
 import sectionBg from '../assets/images/section_background.png';
-import adnan from '../assets/images/adnan.png';
-import devi from '../assets/images/devi.png';
-import athulya from '../assets/images/athulya.png';
+
+import educationBackground from '../assets/images/education-background.jpg';
 
 import VideoPlayer from "../components/VideoPlayer.astro";
 import BaseLayout from "../layouts/baselayout.astro";
@@ -32,15 +31,14 @@ const testimonialData = [
 ---
 
 <BaseLayout>
-
     <!-- Hero Section with Background Image and Full Viewport Height -->
     <section
         class="relative min-h-screen flex flex-col justify-between bg-gradient-to-r from-primary to-secondary text-white pb-16"
     >
         <!-- Background Image with Overlay -->
         <div class="absolute inset-0 z-0">
-            <img
-                src="https://images.unsplash.com/photo-1495995424756-6a5a3f9e7543?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            <Image
+                src={educationBackground}
                 alt="Education Background"
                 class="w-full h-full object-cover"
             />
@@ -107,6 +105,10 @@ const testimonialData = [
                                     <div class="flex-shrink-0 w-full h-full">
                                         <VideoPlayer src="/video/ad.mp4" />
                                     </div>
+                                    <div class="flex-shrink-0 w-full h-full">
+                                        <VideoPlayer src="/video/ad.mp4" />
+                                    </div>
+                                
                                 
                                 </div>
                             </div>
